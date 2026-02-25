@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html xml:lang="ru" lang="ru" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+<head dir="ltr" lang="ru">
+	<title>Моё семейное древо - Карта семьи</title>
+	<meta charset="UTF-8" />
+	<meta name ="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=0.5, maximum-scale=10.0, user-scalable=yes" />
+	<meta name ="apple-mobile-web-app-capable" content="yes" />
+	<meta name="generator" content="Gramps AIO64-6.0.1--1 http://gramps-project.org/" />
+	<meta name="author" content="" />
+	<meta name="robots" content="noindex" />
+	<meta name="googlebot" content="noindex" />
+	<link href="../../../images/favicon2.ico" rel="shortcut icon" type="image/x-icon" />
+	<link href="../../../css/ancestortree.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="../../../css/narrative-print.css" media="print" rel="stylesheet" type="text/css" />
+	<link href="../../../css/narrative-screen.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="../../../css/Basic-Ash.css" media="screen" rel="alternate stylesheet" title="Пепел" type="text/css" />
+	<link href="../../../css/Basic-Blue.css" media="screen" rel="alternate stylesheet" title="Голубой" type="text/css" />
+	<link href="../../../css/Basic-Cypress.css" media="screen" rel="alternate stylesheet" title="Кипарис" type="text/css" />
+	<link href="../../../css/Basic-Lilac.css" media="screen" rel="alternate stylesheet" title="Сиреневый" type="text/css" />
+	<link href="../../../css/Basic-Peach.css" media="screen" rel="alternate stylesheet" title="Персиковый" type="text/css" />
+	<link href="../../../css/Basic-Spruce.css" media="screen" rel="alternate stylesheet" title="Ель" type="text/css" />
+	<link href="../../../css/Mainz.css" media="screen" rel="alternate stylesheet" title="Майнц" type="text/css" />
+	<link href="../../../css/Nebraska.css" media="screen" rel="alternate stylesheet" title="Небраска" type="text/css" />
+	<script>function navFunction() { var x = document.getElementById("dropmenu"); if (x.className === "nav") { x.className += " responsive"; } else { x.className = "nav"; } }</script>
+	<link href="../../../css/narrative-maps.css" media="screen" rel="stylesheet" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+	<script src="https://openlayers.org/en/v6.15.1/build/ol.js" type="text/javascript"></script>
+	<link href="https://openlayers.org/en/v6.15.1/css/ol.css" rel="stylesheet" type="text/css" />
+</head>
+<body id ="FamilyMap">
+	<div id="outerwrapper">
+		<div class="ltr" id="header">
+			<button href="javascript:void(0);" class="navIcon" onclick="navFunction()">&#8801;</button>
+			<h1 class="nav" id="SiteTitle">Моё семейное древо</h1>
+		</div>
+		<div class="wrappernav ltr" id="nav" role="navigation">
+			<div class="container">
+				<ul class="nav" id="dropmenu">
+					<li><a href="../../../individuals.html" title="Люди">Люди</a></li>
+					<li><a href="../../../index.html" title="Фамилии">Фамилии</a></li>
+					<li><a href="../../../families.html" title="Семьи">Семьи</a></li>
+					<li><a href="../../../events.html" title="События">События</a></li>
+					<li><a href="../../../places.html" title="Места">Места</a></li>
+					<li><a href="../../../heatmaps.html" title="Heatmaps">Heatmaps</a></li>
+					<li><a href="../../../sources.html" title="Источники">Источники</a></li>
+					<li><a href="../../../repositories.html" title="Хранилища">Хранилища</a></li>
+					<li><a href="../../../media.html" title="Альбом">Альбом</a></li>
+					<li><a href="../../../updates.html" title="Обновления">Обновления</a></li>
+					<li><a href="../../../cal/2026/index.html" title="Веб-календарь">Веб-календарь</a></li>
+				</ul>
+			</div>
+		</div>
+		<button id="gototop" onclick="GoToTop()" title="Перейти наверх">
+			<svg class="triangle" viewBox="0 0 100 100">
+				<polygon points="0,100 100,100, 50,10">
+				</polygon>
+			</svg>
+		</button>
+	
+<script>
+//Get the button
+var gototop = document.getElementById("gototop");
+
+// When the user scrolls down 200px from the top of the document,
+// show the button
+window.onscroll = function() {scroll()};
+
+function scroll() {
+  if (document.body.scrollTop > 200 ||
+      document.documentElement.scrollTop > 200) {
+    gototop.style.display = "block";
+  } else {
+    gototop.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function GoToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+		<div class="content" id="FamilyMapDetail">
+			<h3>Отслеживание Чернов, Андрей Никандрович</h3>
+			<p id="description">
+			Эта страница карты представляет этого человека и его потомков со всеми их событиями/местами. Если поместите курсор над отметкой, то отобразится название места. Отметки и связанные ссылки хранятся с сортировкой по дате (если есть). Нажатие на название мест в разделе ссылок перенесёт Вас на страницу данного места.
+			</p>
+			<div id="map_canvas">
+			</div>
+			<div class="ol-popup" id="popup"><a class="ol-popup-closer" href="#" id="popup-closer"></a><div class="ol-popup-title" id="popup-title"></div><div class="ol-popup-content" id="popup-content"></div></div>
+			<div class="ol-popup" id="tooltip"><div id="tooltip-content"></div></div>
+			<div class="subsection" id="references">
+				<h4>Ссылки</h4>
+				<table class="infolist ltr">
+					<thead>
+						<tr>
+							<th class="ColumnDate">Дата</th>
+							<th class="ColumnPlace">Название места</th>
+							<th class="ColumnType">Тип События</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="ColumnDate">17 окт 1865 (Юлианский)</td>
+							<td class="ColumnPlace"><a href="../../../plc/b/c/f8f9917afa8a6eadd0b374fcb.html" title="Церковь Александра и Антонины Римских в Селище, Селище, Костромской р-н, Костромская область, Россия">Церковь Александра и Антонины Римских в Селище, Селище, Костромской р-н, Костромская область, Россия</a></td>
+							<td class="ColumnType">Брак</td>
+						</tr>
+						<tr>
+							<td class="ColumnDate">1866</td>
+							<td class="ColumnPlace"><a href="../../../plc/7/1/f8d94c4226b6590ab5e07ed7917.html" title="Селище, Костромской р-н, Костромская область, Россия">Селище, Костромской р-н, Костромская область, Россия</a></td>
+							<td class="ColumnType">Рождение</td>
+						</tr>
+						<tr>
+							<td class="ColumnDate">1871</td>
+							<td class="ColumnPlace"><a href="../../../plc/7/1/f8d94c4226b6590ab5e07ed7917.html" title="Селище, Костромской р-н, Костромская область, Россия">Селище, Костромской р-н, Костромская область, Россия</a></td>
+							<td class="ColumnType">Рождение</td>
+						</tr>
+						<tr>
+							<td class="ColumnDate">13 июл 1882 (Юлианский)</td>
+							<td class="ColumnPlace"><a href="../../../plc/7/1/f8d94c4226b6590ab5e07ed7917.html" title="Селище, Костромской р-н, Костромская область, Россия">Селище, Костромской р-н, Костромская область, Россия</a></td>
+							<td class="ColumnType">Рождение</td>
+						</tr>
+						<tr>
+							<td class="ColumnDate">18 июл 1882 (Юлианский)</td>
+							<td class="ColumnPlace"><a href="../../../plc/b/c/f8f9917afa8a6eadd0b374fcb.html" title="Церковь Александра и Антонины Римских в Селище, Селище, Костромской р-н, Костромская область, Россия">Церковь Александра и Антонины Римских в Селище, Селище, Костромской р-н, Костромская область, Россия</a></td>
+							<td class="ColumnType">Крещение</td>
+						</tr>
+						<tr>
+							<td class="ColumnDate">12 окт 1910 (Юлианский)</td>
+							<td class="ColumnPlace"><a href="../../../plc/7/1/f8d94c4226b6590ab5e07ed7917.html" title="Селище, Костромской р-н, Костромская область, Россия">Селище, Костромской р-н, Костромская область, Россия</a></td>
+							<td class="ColumnType">Поручительство</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		<script deter="deter" style="width =100%; height =100%;" type="text/javascript">
+		
+  var marker_png = '../../../images/marker.png';
+
+		
+  window.addEventListener("load", function() {
+    var map;
+    var heat = 'markers';
+    var tracelife = [
+    [40.878100, 57.757700, 'Селище, Костромской р-н, Костромская область, Россия', "<p><a href='../../../ppl/1/8/f94d35c85827285eead70e86581.html' title='I0129' target='_self'>Чернов, Василий Андреевич</a>:<a href='../../../evt/e/f/f94d3694c1d565a6b8af9534ffe.html' title='1866' target='_self'>Рождение</a> (1866)" + "<br><a href='../../../ppl/9/7/f8f000f47b149e967efcc2b1179.html' title='I0069' target='_self'>Чернов, Александр Андреевич</a>:<a href='../../../evt/c/7/f8f576dff1691e26fa2aa4f7c.html' title='1871' target='_self'>Рождение</a> (1871)" + "<br><a href='../../../ppl/9/7/f8f000f47b149e967efcc2b1179.html' title='I0069' target='_self'>Чернов, Александр Андреевич</a>:<a href='../../../evt/5/4/f8f57ae2eaf2781a92e033c4d45.html' title='12 окт 1910 (Юлианский)' target='_self'>Поручительство</a> (12 окт 1910 (Юлианский))" + "<br><a href='../../../ppl/9/3/f8d95869ba24bdd86e8ceacb239.html' title='I0009' target='_self'>Чернов, Владимир Андреевич</a>:<a href='../../../evt/9/a/f8df8428d5a4338b2f21704ea9.html' title='13 июл 1882 (Юлианский)' target='_self'>Рождение</a> (13 июл 1882 (Юлианский))"],
+    [40.877723, 57.758906, 'Церковь Александра и Антонины Римских в Селище, Селище, Костромской р-н, Костромская область, Россия', "<p><a href='../../../ppl/5/9/f8d95b152dc1a3e97b8efaa2595.html' title='I0017' target='_self'>Чернов, Андрей Никандрович</a>:<a href='../../../evt/f/3/101791bce2d136101b89c3abf53f.html' title='17 окт 1865 (Юлианский)' target='_self'>Брак</a> (17 окт 1865 (Юлианский))" + "<br><a href='../../../ppl/9/2/f94d32756f9359a2565b4d2c729.html' title='I0128' target='_self'>Чернова, Анфиса Федоровна</a>:<a href='../../../evt/f/3/101791bce2d136101b89c3abf53f.html' title='17 окт 1865 (Юлианский)' target='_self'>Брак</a> (17 окт 1865 (Юлианский))" + "<br><a href='../../../fam/2/1/f8d95b0e7b0397c24112531a912.html' title='F0009' target='_self'>Семья Чернов, Андрей Никандрович и Чернова, Анфиса Федоровна</a>" + "<br><a href='../../../ppl/9/3/f8d95869ba24bdd86e8ceacb239.html' title='I0009' target='_self'>Чернов, Владимир Андреевич</a>:<a href='../../../evt/2/3/f96062a936a7fab61f5256df032.html' title='18 июл 1882 (Юлианский)' target='_self'>Крещение</a> (18 июл 1882 (Юлианский))"],];;
+    var iconStyle = new ol.style.Style({
+      image: new ol.style.Icon(({
+        anchor: [0.2, 48],
+        anchorXUnits: 'fraction',
+        anchorYUnits: 'pixels',
+        opacity: 1.0,
+        src: marker_png
+      }))
+    });
+    var markerSource = new ol.source.Vector({
+    });
+    var centerCoord = new ol.proj.transform([40.87791200, 57.75830500], 'EPSG:4326', 'EPSG:3857');
+    var zoom = 6;
+    var radius = 0;
+    var blur = 0;
+    for (var i = 0; i < tracelife.length; i++) {
+      var loc = tracelife[i];
+      var iconFeature = new ol.Feature({
+       geometry: new ol.geom.Point(ol.proj.transform([loc[0], loc[1]],
+                                                     'EPSG:4326', 'EPSG:3857')),
+       name: loc[2],
+       data: loc[3],
+      });
+      iconFeature.setStyle(iconStyle);
+      markerSource.addFeature(iconFeature);
+    }
+    markerLayer = new ol.layer.Vector({
+      source: markerSource,
+      style: iconStyle
+    });
+    tooltip = new ol.layer.Vector({
+      source: markerSource,
+      style: iconStyle
+    });
+    heatmap = new ol.layer.Heatmap({
+      source: markerSource,
+      radius: radius,
+      blur: blur,
+      style: iconStyle
+    });
+    if (heat == "heatmap") {
+      map = new ol.Map({
+                   target: 'map_canvas',
+                   layers: [new ol.layer.Tile({ source: new ol.source.OSM() }),
+                            heatmap],
+                   view: new ol.View({ center: centerCoord, zoom: zoom })
+                   });
+    } else {
+      map = new ol.Map({
+                   target: 'map_canvas',
+                   layers: [new ol.layer.Tile({ source: new ol.source.OSM() }),
+                            markerLayer, tooltip],
+                   view: new ol.View({ center: centerCoord, zoom: zoom })
+                   });
+    };
+
+		
+    var element = document.getElementById('popup');
+    var content = document.getElementById('popup-content');
+    var ptitle = document.getElementById('popup-title');
+    var closer = document.getElementById('popup-closer');
+    var tip = document.getElementById('tooltip');
+    var tipcontent = document.getElementById('tooltip-content');
+    var tltip1 = undefined;
+    var tltip2 = undefined;
+    var tooltip = new ol.Overlay({
+      element: tip,
+      positioning: 'bottom-center',
+      offset: [10, 0],
+    });
+    map.addOverlay(tooltip);
+    var popup = new ol.Overlay({
+      element: element,
+      positioning: 'bottom-center',
+      autoPan: true,
+      autoPanAnimation: { duration: 500 },
+      stopEvent: true
+    });
+    map.addOverlay(popup);
+    /**
+     * Add a click handler to hide the popup.
+     * @return {boolean} Don't follow the href.
+     */
+    closer.onclick = function() {
+      popup.setPosition(undefined);
+      closer.blur();
+      tltip1 = undefined;
+      tltip2 = undefined;
+      return false;
+    };
+    map.on('pointermove', function(evt) {
+      evt.preventDefault()
+      if (tltip2 !== undefined) {
+        return;
+      }
+      var feature = this.forEachFeatureAtPixel(evt.pixel,
+                                               function(feature, layer) {
+        tltip1 = feature;
+        return feature;
+      });
+      map.getTargetElement().style.cursor = feature ? 'pointer' : '';
+      if (evt.dragging) {
+        tooltip.setPosition(undefined);
+        return;
+      }
+      if (feature) {
+        var coordinate = evt.coordinate;
+        tipcontent.innerHTML = feature.get('name');
+        tooltip.setPosition(coordinate);
+      } else {
+        tooltip.setPosition(undefined);
+      }
+    });
+    map.on('singleclick', function(evt) {
+      evt.preventDefault();
+      if (tltip1 !== undefined) {
+        tooltip.setPosition(undefined);
+      }
+      var feature = map.forEachFeatureAtPixel(evt.pixel,
+                                              function(feature, layer) {
+        tltip2 = feature;
+        return feature;
+      });
+      if (feature) {
+      var coordinate = evt.coordinate;
+      var title = '<h2>' + feature.get('name') + '</h2>';
+      ptitle.innerHTML = title;
+      content.innerHTML = feature.get('data');
+      popup.setPosition(coordinate);
+      }
+      });
+  });
+
+		</script>
+		</div>
+		<div class="fullclear"></div>
+		<div id="footer">
+			<p id="createdate">
+			Создано с помощью <a href="http://gramps-project.org/">Gramps</a> AIO64-6.0.1--1 в 25 фев 2026<br />Создано для Вся база данных
+			</p>
+			<p id="copyright">
+			<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License - By attribution" title="Creative Commons License - By attribution" src="../../../images/somerights20.gif" /></a>
+			</p>
+		</div>
+	</div>
+</body>
+</html>

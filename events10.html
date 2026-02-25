@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html xml:lang="ru" lang="ru" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+<head dir="ltr" lang="ru">
+	<title>Моё семейное древо - События</title>
+	<meta charset="UTF-8" />
+	<meta name ="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=0.5, maximum-scale=10.0, user-scalable=yes" />
+	<meta name ="apple-mobile-web-app-capable" content="yes" />
+	<meta name="generator" content="Gramps AIO64-6.0.1--1 http://gramps-project.org/" />
+	<meta name="author" content="" />
+	<meta name="robots" content="noindex" />
+	<meta name="googlebot" content="noindex" />
+	<link href="images/favicon2.ico" rel="shortcut icon" type="image/x-icon" />
+	<link href="css/ancestortree.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="css/narrative-print.css" media="print" rel="stylesheet" type="text/css" />
+	<link href="css/narrative-screen.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="css/Basic-Ash.css" media="screen" rel="alternate stylesheet" title="Пепел" type="text/css" />
+	<link href="css/Basic-Blue.css" media="screen" rel="alternate stylesheet" title="Голубой" type="text/css" />
+	<link href="css/Basic-Cypress.css" media="screen" rel="alternate stylesheet" title="Кипарис" type="text/css" />
+	<link href="css/Basic-Lilac.css" media="screen" rel="alternate stylesheet" title="Сиреневый" type="text/css" />
+	<link href="css/Basic-Peach.css" media="screen" rel="alternate stylesheet" title="Персиковый" type="text/css" />
+	<link href="css/Basic-Spruce.css" media="screen" rel="alternate stylesheet" title="Ель" type="text/css" />
+	<link href="css/Mainz.css" media="screen" rel="alternate stylesheet" title="Майнц" type="text/css" />
+	<link href="css/Nebraska.css" media="screen" rel="alternate stylesheet" title="Небраска" type="text/css" />
+	<script>function navFunction() { var x = document.getElementById("dropmenu"); if (x.className === "nav") { x.className += " responsive"; } else { x.className = "nav"; } }</script>
+</head>
+<body dir="ltr">
+	<div id="outerwrapper">
+		<div class="ltr" id="header">
+			<button href="javascript:void(0);" class="navIcon" onclick="navFunction()">&#8801;</button>
+			<h1 class="nav" id="SiteTitle">Моё семейное древо</h1>
+		</div>
+		<div class="wrappernav ltr" id="nav" role="navigation">
+			<div class="container">
+				<ul class="nav" id="dropmenu">
+					<li><a href="individuals.html" title="Люди">Люди</a></li>
+					<li><a href="index.html" title="Фамилии">Фамилии</a></li>
+					<li><a href="families.html" title="Семьи">Семьи</a></li>
+					<li class = "CurrentSection"><a href="events.html" title="События">События</a></li>
+					<li><a href="places.html" title="Места">Места</a></li>
+					<li><a href="heatmaps.html" title="Heatmaps">Heatmaps</a></li>
+					<li><a href="sources.html" title="Источники">Источники</a></li>
+					<li><a href="repositories.html" title="Хранилища">Хранилища</a></li>
+					<li><a href="media.html" title="Альбом">Альбом</a></li>
+					<li><a href="updates.html" title="Обновления">Обновления</a></li>
+					<li><a href="cal/2026/index.html" title="Веб-календарь">Веб-календарь</a></li>
+				</ul>
+			</div>
+		</div>
+		<button id="gototop" onclick="GoToTop()" title="Перейти наверх">
+			<svg class="triangle" viewBox="0 0 100 100">
+				<polygon points="0,100 100,100, 50,10">
+				</polygon>
+			</svg>
+		</button>
+	
+<script>
+//Get the button
+var gototop = document.getElementById("gototop");
+
+// When the user scrolls down 200px from the top of the document,
+// show the button
+window.onscroll = function() {scroll()};
+
+function scroll() {
+  if (document.body.scrollTop > 200 ||
+      document.documentElement.scrollTop > 200) {
+    gototop.style.display = "block";
+  } else {
+    gototop.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function GoToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+		<div class="content" id="EventList">
+			<p id="description">
+			Эта страница содержит список всех событий из базы данных, отсортированный по их типу и дате (если таковая указана). Выбор Gramps ID ведёт к странице соответствующего события.
+			</p>
+			<div id="ltr">
+				<ul class="ltr">
+					<li><a href="events.html" title="Alphabet Menu: А">А</a></li>
+					<li><a href="events1.html" title="Alphabet Menu: Б">Б</a></li>
+					<li><a href="events2.html" title="Alphabet Menu: В">В</a></li>
+					<li><a href="events3.html" title="Alphabet Menu: Д">Д</a></li>
+					<li><a href="events4.html" title="Alphabet Menu: З">З</a></li>
+					<li><a href="events5.html" title="Alphabet Menu: К">К</a></li>
+					<li><a href="events6.html" title="Alphabet Menu: Н">Н</a></li>
+					<li><a href="events7.html" title="Alphabet Menu: О">О</a></li>
+					<li><a href="events8.html" title="Alphabet Menu: П">П</a></li>
+					<li><a href="events9.html" title="Alphabet Menu: Р">Р</a></li>
+					<li class = "CurrentSection"><a href="events10.html" title="Alphabet Menu: С">С</a></li>
+					<li><a href="events11.html" title="Alphabet Menu: Э">Э</a></li>
+				</ul>
+			</div>
+			<table class="infolist primobjlist alphaevent ltr">
+				<thead>
+					<tr>
+						<th class="ColumnRowLabel">Буква</th>
+						<th class="ColumnType">Тип</th>
+						<th class="ColumnDate">Дата</th>
+						<th class="ColumnGRAMPSID">Gramps ID</th>
+						<th class="ColumnPerson">Лицо</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class = "BeginLetter BeginType">
+						<td class="ColumnLetter"><a name="С" title="Типы событий на букву С">С</a></td>
+						<td class="ColumnType" title="Смерть">Смерть</td>
+						<td class="ColumnDate"></td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/9/c/f8efc7f1750480eccc60b42cc9.html" title="E0054">E0054</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/b/c/f8efc7862cf29fe5b79733173cb.html">Домашнева, Ольга Станиславовна Станиславовна</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate"></td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/6/d/f93c6c4ddee12911fa05ad29bd6.html" title="E0148">E0148</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/6/5/f934035b7cc8b1f87210f22f56.html">Минкевич, Анастасия Ивановна</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate"></td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/7/6/f93c6d47abd5592c81dcaebe67.html" title="E0150">E0150</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/e/e/f929e3f7b56391c47e9b8900eee.html">Минкевич, Ефросиния Иаковлева</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">1 май 1823 (Юлианский)</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/7/2/f929bd1872968c26247453d9e27.html" title="E0132">E0132</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/2/b/f929bc808512ab98e0efd825db2.html">Минкевич, Андрей Онуфриевич</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">9 ноя 1841 (Юлианский)</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/e/7/f92c7f51d233ab950eaa4d4ce7e.html" title="E0140">E0140</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/9/f/f929ad394ad70029e13cfe39f9.html">Минкевич, Надежда Онуфриевна</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">11 ноя 1841 (Юлианский)</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/b/d/f92c80981474b9847ff411a84db.html" title="E0141">E0141</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/c/9/f929b0c4ab3113d3af1a754469c.html">Минкевич, София Онуфриевна</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">30 июл 1848 (Юлианский)</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/3/4/f929f9733a1ea12346f3b28e43.html" title="E0137">E0137</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/0/1/f929f8d38eeba06c43ec044010.html">Минкевич, Сергий Онуфриевич</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">9 апр 1862 (Юлианский)</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/d/7/f929b9da43a699e63e5ad0c5f7d.html" title="E0129">E0129</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/d/e/f929b7b1418656a0477af47a0ed.html">Минкевич, Онуфрий Семенович</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">24 янв 1871 (Юлианский)</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/e/8/101823373e6327f84966ec44188e.html" title="E10006">E10006</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/b/1/101822c6bc3e40c551126bd371b.html">Минкевич, Иаков Семенович</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">15 сен 1893 (Юлианский)</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/0/f/101d94aa754f5623e687eb6c67f0.html" title="E10011">E10011</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/7/a/f8dc91096ac555c7971eee5b9a7.html">Минкевич, Иван Онуфриевич</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">до 1904</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/f/8/f990e8fed396bf44ab64a99ec8f.html" title="E0193">E0193</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/6/4/f8d95aa7897587b616e95de8846.html">Зверев, Алексей Иванович</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">10 сен 1904 (Юлианский)</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/3/1/f93c6ccbab81daf22d810344913.html" title="E0149">E0149</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/3/b/f934043815e14c4fc8a80f12ab3.html">Минкевич, Федор Иванович</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">после 1907</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/7/b/f983755f99d385331e5964863b7.html" title="E0184">E0184</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/b/f/f98374e57396913897a94f69dfb.html">Чернова</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">до 1910</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/a/8/f9837e9635b19070b6ff27e368a.html" title="E0185">E0185</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/a/d/f9837b102687110daca8891b1da.html">Чернова</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">к 1 янв 1922</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/0/8/1017ff1f036c4ab8cb908680ce80.html" title="E10004">E10004</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/8/c/f8e8b8cf0797cdcbed983f226c8.html">Брик, София</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">1933</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/c/a/f922b3152f13543f986060643ac.html" title="E0103">E0103</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/f/c/f8dc917c8d87c020417e64f93cf.html">Минкевич Эндрюс Каролина, Екатерина Фоминична</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">29 июл 1936</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/9/6/f8f0540e65973287a06a641ee69.html" title="E0056">E0056</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/6/8/f8d958a65637ee48a0a1bfbcb86.html">Чернова Гарибина, Мария Ивановна</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">25 окт 1941</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/d/2/f8d94909e2b11ea75c55c65ba2d.html" title="E0005">E0005</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/d/4/f8d94582437255d2d6c43cbfb4d.html">Зверев, Анатолий Александрович</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">1943</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/7/7/f8e97b741313254682c098f5877.html" title="E0048">E0048</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/f/0/f8dc5180f205e5745331fad280f.html">Брик, Тимофей Михайлович</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">20 авг 1943</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/d/8/f8dc46ad1d1665ce08678c43f8d.html" title="E0016">E0016</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/b/9/f8dc3de34f130ca30992d7e809b.html">Брик, Илья Тимофеевич</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">9 сен 1956</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/2/3/f90f5632e1e13990e08aefe0032.html" title="E0079">E0079</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/9/3/f8d95869ba24bdd86e8ceacb239.html">Чернов, Владимир Андреевич</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">1959</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/1/9/f96717401a119141d50ba856091.html" title="E0170">E0170</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/5/e/f966f11c5b07cf9e8e5b90787e5.html">Рюмин, Николай Федорович</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">1964</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/b/9/1010ef4f95f041b412780a0ed49b.html" title="E15419">E15419</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/a/9/1010ef446e813b34cb9b4d05d39a.html">Ширман, Александр Моисеевич</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">1964</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/b/9/f966eed3bea3468c16ae1c4459b.html" title="E0165">E0165</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/2/4/f966da911b0536055b820adaa42.html">Рюмина Зверева, Параскева Алексеевна</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">1965</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/d/4/f8e97b14d3427d0b6a81de4694d.html" title="E0047">E0047</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/1/d/f8dc901aa6d5086ddd5f95c3bd1.html">Архипова Минкевич, Мария Ивановна</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">около 1971</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/f/c/f94fdfd5bd1192fe5590578edcf.html" title="E0158">E0158</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/9/0/f8d9570baa41bce2b18825e1209.html">Сальникова Спицына, Мария Степановна</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">после 1973</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/e/7/f93c6a66a79428782e2fe57847e.html" title="E0147">E0147</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/5/2/f8ea28a51b342fef93657957a25.html">Минкевич, Ефросинья Ивановна</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">1975</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/3/0/f8e97c0aa754f9b48359ca7a803.html" title="E0050">E0050</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/e/f/f8dc94bf3d36bc9b9f9ad2f93fe.html">Архипова, Тамара Васильевна</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">1976</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/6/4/f8ea2889167172fd0bf51436746.html" title="E0052">E0052</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/5/e/f8ea27fe267b6a2b344d4b7e5.html">Радзиминская-Францкевич Минкевич, Лидия Ивановна</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">1984</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/0/e/1010e8d635662e516bda020398e0.html" title="E0162">E0162</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/8/1/f8dc96d4d9d36790c6927f6b418.html">Брик, Эсфирь Тимофеевна</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">1987</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/9/5/f922a069b5e6a038b2eb3898859.html" title="E0099">E0099</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/5/b/f922a02b8f453617981906932b5.html">, Юрий</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">24 янв 1991</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/6/f/f8dc51050cd713e2dd31b49faf6.html" title="E0019">E0019</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/3/5/f8dc49ff3f457de102df018a253.html">Архипова, Зоя Васильевна</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">1995</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/6/1/f8d94b3bd6d5d4163a9c00d0a16.html" title="E0007">E0007</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/b/7/f8d9496cd737d88b3a3463b3c7b.html">Чернова, Тамара Владимировна</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">29 окт 1998</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/2/7/f8d940218b24349b853fba67372.html" title="E0002">E0002</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/e/6/f8d90b9e4ae710a2ecf8a03786e.html">Зверев, Игорь Анатольевич</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">29 апр 2017</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/7/a/f95d2d54d595845c96f2b985da7.html" title="E0160">E0160</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/3/3/f8dcadadb4d45f81d6da16cfe33.html">Домашнева Зверева, Маргарита Анатольевна</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">12 авг 2018</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/5/2/f9232f5001c15ee4f6832b5ef25.html" title="E0115">E0115</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/d/b/f8dc3ba7c875260c26e67e3d5bd.html">Архипова Брик, Сусанна Ильинична</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate">17 янв 2025</td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/d/7/fd4568855262b53e591fd9bd67d.html" title="E0058">E0058</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/f/2/f8dbfb38399236a8b8194b83c2f.html">Зверева, Татьяна Игоревна</a></span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="fullclear"></div>
+		<div id="footer">
+			<p id="createdate">
+			Создано с помощью <a href="http://gramps-project.org/">Gramps</a> AIO64-6.0.1--1<br />Последнее изменение было сделано 2026-02-24 11:57:09<br />Создано для Вся база данных
+			</p>
+			<p id="copyright">
+			<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License - By attribution" title="Creative Commons License - By attribution" src="images/somerights20.gif" /></a>
+			</p>
+		</div>
+	</div>
+</body>
+</html>

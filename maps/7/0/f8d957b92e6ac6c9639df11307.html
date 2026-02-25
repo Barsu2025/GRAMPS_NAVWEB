@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html xml:lang="ru" lang="ru" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+<head dir="ltr" lang="ru">
+	<title>Моё семейное древо - Карта семьи</title>
+	<meta charset="UTF-8" />
+	<meta name ="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=0.5, maximum-scale=10.0, user-scalable=yes" />
+	<meta name ="apple-mobile-web-app-capable" content="yes" />
+	<meta name="generator" content="Gramps AIO64-6.0.1--1 http://gramps-project.org/" />
+	<meta name="author" content="" />
+	<meta name="robots" content="noindex" />
+	<meta name="googlebot" content="noindex" />
+	<link href="../../../images/favicon2.ico" rel="shortcut icon" type="image/x-icon" />
+	<link href="../../../css/ancestortree.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="../../../css/narrative-print.css" media="print" rel="stylesheet" type="text/css" />
+	<link href="../../../css/narrative-screen.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="../../../css/Basic-Ash.css" media="screen" rel="alternate stylesheet" title="Пепел" type="text/css" />
+	<link href="../../../css/Basic-Blue.css" media="screen" rel="alternate stylesheet" title="Голубой" type="text/css" />
+	<link href="../../../css/Basic-Cypress.css" media="screen" rel="alternate stylesheet" title="Кипарис" type="text/css" />
+	<link href="../../../css/Basic-Lilac.css" media="screen" rel="alternate stylesheet" title="Сиреневый" type="text/css" />
+	<link href="../../../css/Basic-Peach.css" media="screen" rel="alternate stylesheet" title="Персиковый" type="text/css" />
+	<link href="../../../css/Basic-Spruce.css" media="screen" rel="alternate stylesheet" title="Ель" type="text/css" />
+	<link href="../../../css/Mainz.css" media="screen" rel="alternate stylesheet" title="Майнц" type="text/css" />
+	<link href="../../../css/Nebraska.css" media="screen" rel="alternate stylesheet" title="Небраска" type="text/css" />
+	<script>function navFunction() { var x = document.getElementById("dropmenu"); if (x.className === "nav") { x.className += " responsive"; } else { x.className = "nav"; } }</script>
+	<link href="../../../css/narrative-maps.css" media="screen" rel="stylesheet" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+	<script src="https://openlayers.org/en/v6.15.1/build/ol.js" type="text/javascript"></script>
+	<link href="https://openlayers.org/en/v6.15.1/css/ol.css" rel="stylesheet" type="text/css" />
+</head>
+<body id ="FamilyMap">
+	<div id="outerwrapper">
+		<div class="ltr" id="header">
+			<button href="javascript:void(0);" class="navIcon" onclick="navFunction()">&#8801;</button>
+			<h1 class="nav" id="SiteTitle">Моё семейное древо</h1>
+		</div>
+		<div class="wrappernav ltr" id="nav" role="navigation">
+			<div class="container">
+				<ul class="nav" id="dropmenu">
+					<li><a href="../../../individuals.html" title="Люди">Люди</a></li>
+					<li><a href="../../../index.html" title="Фамилии">Фамилии</a></li>
+					<li><a href="../../../families.html" title="Семьи">Семьи</a></li>
+					<li><a href="../../../events.html" title="События">События</a></li>
+					<li><a href="../../../places.html" title="Места">Места</a></li>
+					<li><a href="../../../heatmaps.html" title="Heatmaps">Heatmaps</a></li>
+					<li><a href="../../../sources.html" title="Источники">Источники</a></li>
+					<li><a href="../../../repositories.html" title="Хранилища">Хранилища</a></li>
+					<li><a href="../../../media.html" title="Альбом">Альбом</a></li>
+					<li><a href="../../../updates.html" title="Обновления">Обновления</a></li>
+					<li><a href="../../../cal/2026/index.html" title="Веб-календарь">Веб-календарь</a></li>
+				</ul>
+			</div>
+		</div>
+		<button id="gototop" onclick="GoToTop()" title="Перейти наверх">
+			<svg class="triangle" viewBox="0 0 100 100">
+				<polygon points="0,100 100,100, 50,10">
+				</polygon>
+			</svg>
+		</button>
+	
+<script>
+//Get the button
+var gototop = document.getElementById("gototop");
+
+// When the user scrolls down 200px from the top of the document,
+// show the button
+window.onscroll = function() {scroll()};
+
+function scroll() {
+  if (document.body.scrollTop > 200 ||
+      document.documentElement.scrollTop > 200) {
+    gototop.style.display = "block";
+  } else {
+    gototop.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function GoToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+		<div class="content" id="FamilyMapDetail">
+			<h3>Отслеживание Зверев, Александр Алексеевич</h3>
+			<p id="description">
+			Эта страница карты представляет этого человека и его потомков со всеми их событиями/местами. Если поместите курсор над отметкой, то отобразится название места. Отметки и связанные ссылки хранятся с сортировкой по дате (если есть). Нажатие на название мест в разделе ссылок перенесёт Вас на страницу данного места.
+			</p>
+			<div id="map_canvas">
+			</div>
+			<div class="ol-popup" id="popup"><a class="ol-popup-closer" href="#" id="popup-closer"></a><div class="ol-popup-title" id="popup-title"></div><div class="ol-popup-content" id="popup-content"></div></div>
+			<div class="ol-popup" id="tooltip"><div id="tooltip-content"></div></div>
+			<div class="subsection" id="references">
+				<h4>Ссылки</h4>
+				<table class="infolist ltr">
+					<thead>
+						<tr>
+							<th class="ColumnDate">Дата</th>
+							<th class="ColumnPlace">Название места</th>
+							<th class="ColumnType">Тип События</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="ColumnDate">1869</td>
+							<td class="ColumnPlace"><a href="../../../plc/5/2/f963e762e185b14842d99011c25.html" title="Плещунино, Кологривский уезд, Костромская область, Россия">Плещунино, Кологривский уезд, Костромская область, Россия</a></td>
+							<td class="ColumnType">Рождение</td>
+						</tr>
+						<tr>
+							<td class="ColumnDate">1870</td>
+							<td class="ColumnPlace"><a href="../../../plc/d/e/f9a0c0aaff67e292b7b6cca1ded.html" title="Васиково, Кологривский уезд, Костромская область, Россия">Васиково, Кологривский уезд, Костромская область, Россия</a></td>
+							<td class="ColumnType">Рождение</td>
+						</tr>
+						<tr>
+							<td class="ColumnDate">12 фев 1888</td>
+							<td class="ColumnPlace"><a href="../../../plc/6/3/f966d0365bd38acaaf6a3813836.html" title="Церковь Успения Пресвятой Богородицы в Успенско-Нейском, Успенье, Кологривский уезд, Костромская область, Россия">Церковь Успения Пресвятой Богородицы в Успенско-Нейском, Успенье, Кологривский уезд, Костромская область, Россия</a></td>
+							<td class="ColumnType">Брак</td>
+						</tr>
+						<tr>
+							<td class="ColumnDate">22 авг 1902 (Юлианский)</td>
+							<td class="ColumnPlace"><a href="../../../plc/5/2/f963e762e185b14842d99011c25.html" title="Плещунино, Кологривский уезд, Костромская область, Россия">Плещунино, Кологривский уезд, Костромская область, Россия</a></td>
+							<td class="ColumnType">Рождение</td>
+						</tr>
+						<tr>
+							<td class="ColumnDate">6 ноя 1905 (Юлианский)</td>
+							<td class="ColumnPlace"><a href="../../../plc/f/1/f8d95fd99ab424b405d9001e1f.html" title="Кронштадт, Ленинградская область, Россия">Кронштадт, Ленинградская область, Россия</a></td>
+							<td class="ColumnType">Восприемничество</td>
+						</tr>
+						<tr>
+							<td class="ColumnDate">25 фев 1908 (Юлианский)</td>
+							<td class="ColumnPlace"><a href="../../../plc/f/1/f8d95fd99ab424b405d9001e1f.html" title="Кронштадт, Ленинградская область, Россия">Кронштадт, Ленинградская область, Россия</a></td>
+							<td class="ColumnType">Рождение</td>
+						</tr>
+						<tr>
+							<td class="ColumnDate">5 мар 1908 (Юлианский)</td>
+							<td class="ColumnPlace"><a href="../../../plc/c/7/f902df286312a23947b2303ac7c.html" title="Собор Владимирской иконы Божией Матери, Кронштадт, Ленинградская область, Россия">Собор Владимирской иконы Божией Матери, Кронштадт, Ленинградская область, Россия</a></td>
+							<td class="ColumnType">Крещение</td>
+						</tr>
+						<tr>
+							<td class="ColumnDate">25 окт 1941</td>
+							<td class="ColumnPlace"><a href="../../../plc/5/5/f8d948d0ac064f7afea9da7f155.html" title="Тверь, Тверская область, Россия">Тверь, Тверская область, Россия</a></td>
+							<td class="ColumnType">Смерть</td>
+						</tr>
+						<tr>
+							<td class="ColumnDate">после 1905</td>
+							<td class="ColumnPlace"><a href="../../../plc/f/1/f8d95fd99ab424b405d9001e1f.html" title="Кронштадт, Ленинградская область, Россия">Кронштадт, Ленинградская область, Россия</a></td>
+							<td class="ColumnType">Проживание</td>
+						</tr>
+						<tr>
+							<td class="ColumnDate">после 1905</td>
+							<td class="ColumnPlace"><a href="../../../plc/f/1/f8d95fd99ab424b405d9001e1f.html" title="Кронштадт, Ленинградская область, Россия">Кронштадт, Ленинградская область, Россия</a></td>
+							<td class="ColumnType">Проживание</td>
+						</tr>
+						<tr>
+							<td class="ColumnDate">с мар 1942 по апр 1942</td>
+							<td class="ColumnPlace"><a href="../../../plc/d/f/f8df3e8dcf53b82ca1f97ba7bfd.html" title="489.7 км., Тверь, Тверская область, Россия">489.7 км., Тверь, Тверская область, Россия</a></td>
+							<td class="ColumnType">Захоронение</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		<script deter="deter" style="width =100%; height =100%;" type="text/javascript">
+		
+  var marker_png = '../../../images/marker.png';
+
+		
+  window.addEventListener("load", function() {
+    var map;
+    var heat = 'markers';
+    var tracelife = [
+    [35.980780, 56.800450, '489.7 км., Тверь, Тверская область, Россия', "<p><a href='../../../ppl/d/4/f8d94582437255d2d6c43cbfb4d.html' title='I0003' target='_self'>Зверев, Анатолий Александрович</a>:<a href='../../../evt/b/0/f8df3e9454ae4c6ead036a330b.html' title='с мар 1942 по апр 1942' target='_self'>Захоронение</a> (с мар 1942 по апр 1942)"],
+    [43.436479, 58.372678, 'Васиково, Кологривский уезд, Костромская область, Россия', "<p><a href='../../../ppl/8/d/f8d958058383c0d7022495c27d8.html' title='I0008' target='_self'>Зверева, Пелагия Васильевна</a>:<a href='../../../evt/8/f/f99e6aff7e36738dc16e91a15f8.html' title='1870' target='_self'>Рождение</a> (1870)"],
+    [29.776160, 59.992000, 'Кронштадт, Ленинградская область, Россия', "<p><a href='../../../ppl/7/0/f8d957b92e6ac6c9639df11307.html' title='I0007' target='_self'>Зверев, Александр Алексеевич</a>:<a href='../../../evt/9/6/f9a0d462f12663b922230e75169.html' title='после 1905' target='_self'>Проживание</a> (после 1905)" + "<br><a href='../../../ppl/7/0/f8d957b92e6ac6c9639df11307.html' title='I0007' target='_self'>Зверев, Александр Алексеевич</a>:<a href='../../../evt/f/8/f8f8ce287ca412a6fb1fe8cdf8f.html' title='6 ноя 1905 (Юлианский)' target='_self'>Восприемничество</a> (6 ноя 1905 (Юлианский))" + "<br><a href='../../../ppl/8/d/f8d958058383c0d7022495c27d8.html' title='I0008' target='_self'>Зверева, Пелагия Васильевна</a>:<a href='../../../evt/6/0/f9a0d4f7e5a7df5d1ba685df306.html' title='после 1905' target='_self'>Проживание</a> (после 1905)" + "<br><a href='../../../ppl/f/1/f8d95ecf72c39ab31289452901f.html' title='I0021' target='_self'>Зверева, Клавдия Александровна</a>:<a href='../../../evt/6/a/f8d95fddb2d10f9d8248c199ba6.html' title='25 фев 1908 (Юлианский)' target='_self'>Рождение</a> (25 фев 1908 (Юлианский))"],
+    [43.562744, 58.436356, 'Плещунино, Кологривский уезд, Костромская область, Россия', "<p><a href='../../../ppl/7/0/f8d957b92e6ac6c9639df11307.html' title='I0007' target='_self'>Зверев, Александр Алексеевич</a>:<a href='../../../evt/a/c/f99e6abc6cb5bd887e0875bcca.html' title='1869' target='_self'>Рождение</a> (1869)" + "<br><a href='../../../ppl/d/4/f8d94582437255d2d6c43cbfb4d.html' title='I0003' target='_self'>Зверев, Анатолий Александрович</a>:<a href='../../../evt/2/e/f8d948083de1b98d7708831de2.html' title='22 авг 1902 (Юлианский)' target='_self'>Рождение</a> (22 авг 1902 (Юлианский))"],
+    [29.766390, 59.998510, 'Собор Владимирской иконы Божией Матери, Кронштадт, Ленинградская область, Россия', "<p><a href='../../../ppl/f/1/f8d95ecf72c39ab31289452901f.html' title='I0021' target='_self'>Зверева, Клавдия Александровна</a>:<a href='../../../evt/c/d/f8e25d25ff5474b81aefdc19fdc.html' title='5 мар 1908 (Юлианский)' target='_self'>Крещение</a> (5 мар 1908 (Юлианский))"],
+    [35.915525, 56.857697, 'Тверь, Тверская область, Россия', "<p><a href='../../../ppl/d/4/f8d94582437255d2d6c43cbfb4d.html' title='I0003' target='_self'>Зверев, Анатолий Александрович</a>:<a href='../../../evt/d/2/f8d94909e2b11ea75c55c65ba2d.html' title='25 окт 1941' target='_self'>Смерть</a> (25 окт 1941)"],
+    [43.449554, 58.455947, 'Церковь Успения Пресвятой Богородицы в Успенско-Нейском, Успенье, Кологривский уезд, Костромская область, Россия', "<p><a href='../../../ppl/7/0/f8d957b92e6ac6c9639df11307.html' title='I0007' target='_self'>Зверев, Александр Алексеевич</a>:<a href='../../../evt/9/7/f909a3a73a6b694a1cfda71179.html' title='12 фев 1888' target='_self'>Брак</a> (12 фев 1888)" + "<br><a href='../../../fam/2/5/f8d957ac50446592d2701ecd252.html' title='F0003' target='_self'>Семья Зверев, Александр Алексеевич и Зверева, Пелагия Васильевна</a>" + "<br><a href='../../../ppl/8/d/f8d958058383c0d7022495c27d8.html' title='I0008' target='_self'>Зверева, Пелагия Васильевна</a>:<a href='../../../evt/9/7/f909a3a73a6b694a1cfda71179.html' title='12 фев 1888' target='_self'>Брак</a> (12 фев 1888)"],];;
+    var iconStyle = new ol.style.Style({
+      image: new ol.style.Icon(({
+        anchor: [0.2, 48],
+        anchorXUnits: 'fraction',
+        anchorYUnits: 'pixels',
+        opacity: 1.0,
+        src: marker_png
+      }))
+    });
+    var markerSource = new ol.source.Vector({
+    });
+    var centerCoord = new ol.proj.transform([36.66456700, 58.39948000], 'EPSG:4326', 'EPSG:3857');
+    var zoom = 4;
+    var radius = 0;
+    var blur = 0;
+    for (var i = 0; i < tracelife.length; i++) {
+      var loc = tracelife[i];
+      var iconFeature = new ol.Feature({
+       geometry: new ol.geom.Point(ol.proj.transform([loc[0], loc[1]],
+                                                     'EPSG:4326', 'EPSG:3857')),
+       name: loc[2],
+       data: loc[3],
+      });
+      iconFeature.setStyle(iconStyle);
+      markerSource.addFeature(iconFeature);
+    }
+    markerLayer = new ol.layer.Vector({
+      source: markerSource,
+      style: iconStyle
+    });
+    tooltip = new ol.layer.Vector({
+      source: markerSource,
+      style: iconStyle
+    });
+    heatmap = new ol.layer.Heatmap({
+      source: markerSource,
+      radius: radius,
+      blur: blur,
+      style: iconStyle
+    });
+    if (heat == "heatmap") {
+      map = new ol.Map({
+                   target: 'map_canvas',
+                   layers: [new ol.layer.Tile({ source: new ol.source.OSM() }),
+                            heatmap],
+                   view: new ol.View({ center: centerCoord, zoom: zoom })
+                   });
+    } else {
+      map = new ol.Map({
+                   target: 'map_canvas',
+                   layers: [new ol.layer.Tile({ source: new ol.source.OSM() }),
+                            markerLayer, tooltip],
+                   view: new ol.View({ center: centerCoord, zoom: zoom })
+                   });
+    };
+
+		
+    var element = document.getElementById('popup');
+    var content = document.getElementById('popup-content');
+    var ptitle = document.getElementById('popup-title');
+    var closer = document.getElementById('popup-closer');
+    var tip = document.getElementById('tooltip');
+    var tipcontent = document.getElementById('tooltip-content');
+    var tltip1 = undefined;
+    var tltip2 = undefined;
+    var tooltip = new ol.Overlay({
+      element: tip,
+      positioning: 'bottom-center',
+      offset: [10, 0],
+    });
+    map.addOverlay(tooltip);
+    var popup = new ol.Overlay({
+      element: element,
+      positioning: 'bottom-center',
+      autoPan: true,
+      autoPanAnimation: { duration: 500 },
+      stopEvent: true
+    });
+    map.addOverlay(popup);
+    /**
+     * Add a click handler to hide the popup.
+     * @return {boolean} Don't follow the href.
+     */
+    closer.onclick = function() {
+      popup.setPosition(undefined);
+      closer.blur();
+      tltip1 = undefined;
+      tltip2 = undefined;
+      return false;
+    };
+    map.on('pointermove', function(evt) {
+      evt.preventDefault()
+      if (tltip2 !== undefined) {
+        return;
+      }
+      var feature = this.forEachFeatureAtPixel(evt.pixel,
+                                               function(feature, layer) {
+        tltip1 = feature;
+        return feature;
+      });
+      map.getTargetElement().style.cursor = feature ? 'pointer' : '';
+      if (evt.dragging) {
+        tooltip.setPosition(undefined);
+        return;
+      }
+      if (feature) {
+        var coordinate = evt.coordinate;
+        tipcontent.innerHTML = feature.get('name');
+        tooltip.setPosition(coordinate);
+      } else {
+        tooltip.setPosition(undefined);
+      }
+    });
+    map.on('singleclick', function(evt) {
+      evt.preventDefault();
+      if (tltip1 !== undefined) {
+        tooltip.setPosition(undefined);
+      }
+      var feature = map.forEachFeatureAtPixel(evt.pixel,
+                                              function(feature, layer) {
+        tltip2 = feature;
+        return feature;
+      });
+      if (feature) {
+      var coordinate = evt.coordinate;
+      var title = '<h2>' + feature.get('name') + '</h2>';
+      ptitle.innerHTML = title;
+      content.innerHTML = feature.get('data');
+      popup.setPosition(coordinate);
+      }
+      });
+  });
+
+		</script>
+		</div>
+		<div class="fullclear"></div>
+		<div id="footer">
+			<p id="createdate">
+			Создано с помощью <a href="http://gramps-project.org/">Gramps</a> AIO64-6.0.1--1 в 25 фев 2026<br />Создано для Вся база данных
+			</p>
+			<p id="copyright">
+			<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License - By attribution" title="Creative Commons License - By attribution" src="../../../images/somerights20.gif" /></a>
+			</p>
+		</div>
+	</div>
+</body>
+</html>

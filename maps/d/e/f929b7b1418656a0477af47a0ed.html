@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html xml:lang="ru" lang="ru" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+<head dir="ltr" lang="ru">
+	<title>Моё семейное древо - Карта семьи</title>
+	<meta charset="UTF-8" />
+	<meta name ="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=0.5, maximum-scale=10.0, user-scalable=yes" />
+	<meta name ="apple-mobile-web-app-capable" content="yes" />
+	<meta name="generator" content="Gramps AIO64-6.0.1--1 http://gramps-project.org/" />
+	<meta name="author" content="" />
+	<meta name="robots" content="noindex" />
+	<meta name="googlebot" content="noindex" />
+	<link href="../../../images/favicon2.ico" rel="shortcut icon" type="image/x-icon" />
+	<link href="../../../css/ancestortree.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="../../../css/narrative-print.css" media="print" rel="stylesheet" type="text/css" />
+	<link href="../../../css/narrative-screen.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="../../../css/Basic-Ash.css" media="screen" rel="alternate stylesheet" title="Пепел" type="text/css" />
+	<link href="../../../css/Basic-Blue.css" media="screen" rel="alternate stylesheet" title="Голубой" type="text/css" />
+	<link href="../../../css/Basic-Cypress.css" media="screen" rel="alternate stylesheet" title="Кипарис" type="text/css" />
+	<link href="../../../css/Basic-Lilac.css" media="screen" rel="alternate stylesheet" title="Сиреневый" type="text/css" />
+	<link href="../../../css/Basic-Peach.css" media="screen" rel="alternate stylesheet" title="Персиковый" type="text/css" />
+	<link href="../../../css/Basic-Spruce.css" media="screen" rel="alternate stylesheet" title="Ель" type="text/css" />
+	<link href="../../../css/Mainz.css" media="screen" rel="alternate stylesheet" title="Майнц" type="text/css" />
+	<link href="../../../css/Nebraska.css" media="screen" rel="alternate stylesheet" title="Небраска" type="text/css" />
+	<script>function navFunction() { var x = document.getElementById("dropmenu"); if (x.className === "nav") { x.className += " responsive"; } else { x.className = "nav"; } }</script>
+	<link href="../../../css/narrative-maps.css" media="screen" rel="stylesheet" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+	<script src="https://openlayers.org/en/v6.15.1/build/ol.js" type="text/javascript"></script>
+	<link href="https://openlayers.org/en/v6.15.1/css/ol.css" rel="stylesheet" type="text/css" />
+</head>
+<body id ="FamilyMap">
+	<div id="outerwrapper">
+		<div class="ltr" id="header">
+			<button href="javascript:void(0);" class="navIcon" onclick="navFunction()">&#8801;</button>
+			<h1 class="nav" id="SiteTitle">Моё семейное древо</h1>
+		</div>
+		<div class="wrappernav ltr" id="nav" role="navigation">
+			<div class="container">
+				<ul class="nav" id="dropmenu">
+					<li><a href="../../../individuals.html" title="Люди">Люди</a></li>
+					<li><a href="../../../index.html" title="Фамилии">Фамилии</a></li>
+					<li><a href="../../../families.html" title="Семьи">Семьи</a></li>
+					<li><a href="../../../events.html" title="События">События</a></li>
+					<li><a href="../../../places.html" title="Места">Места</a></li>
+					<li><a href="../../../heatmaps.html" title="Heatmaps">Heatmaps</a></li>
+					<li><a href="../../../sources.html" title="Источники">Источники</a></li>
+					<li><a href="../../../repositories.html" title="Хранилища">Хранилища</a></li>
+					<li><a href="../../../media.html" title="Альбом">Альбом</a></li>
+					<li><a href="../../../updates.html" title="Обновления">Обновления</a></li>
+					<li><a href="../../../cal/2026/index.html" title="Веб-календарь">Веб-календарь</a></li>
+				</ul>
+			</div>
+		</div>
+		<button id="gototop" onclick="GoToTop()" title="Перейти наверх">
+			<svg class="triangle" viewBox="0 0 100 100">
+				<polygon points="0,100 100,100, 50,10">
+				</polygon>
+			</svg>
+		</button>
+	
+<script>
+//Get the button
+var gototop = document.getElementById("gototop");
+
+// When the user scrolls down 200px from the top of the document,
+// show the button
+window.onscroll = function() {scroll()};
+
+function scroll() {
+  if (document.body.scrollTop > 200 ||
+      document.documentElement.scrollTop > 200) {
+    gototop.style.display = "block";
+  } else {
+    gototop.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function GoToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+		<div class="content" id="FamilyMapDetail">
+			<h3>Отслеживание Минкевич, Онуфрий Семенович</h3>
+			<p id="description">
+			Эта страница карты представляет этого человека и его потомков со всеми их событиями/местами. Если поместите курсор над отметкой, то отобразится название места. Отметки и связанные ссылки хранятся с сортировкой по дате (если есть). Нажатие на название мест в разделе ссылок перенесёт Вас на страницу данного места.
+			</p>
+			<div id="map_canvas">
+			</div>
+			<div class="ol-popup" id="popup"><a class="ol-popup-closer" href="#" id="popup-closer"></a><div class="ol-popup-title" id="popup-title"></div><div class="ol-popup-content" id="popup-content"></div></div>
+			<div class="ol-popup" id="tooltip"><div id="tooltip-content"></div></div>
+			<div class="subsection" id="references">
+				<h4>Ссылки</h4>
+				<table class="infolist ltr">
+					<thead>
+						<tr>
+							<th class="ColumnDate">Дата</th>
+							<th class="ColumnPlace">Название места</th>
+							<th class="ColumnType">Тип События</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="ColumnDate">1796</td>
+							<td class="ColumnPlace"><a href="../../../plc/4/6/fd45829927a77996eca230d3964.html" title="Кринки, Бобруйский уезд, Минская губерния, Белоруссия">Кринки, Бобруйский уезд, Минская губерния, Белоруссия</a></td>
+							<td class="ColumnType">Рождение</td>
+						</tr>
+						<tr>
+							<td class="ColumnDate">1822</td>
+							<td class="ColumnPlace"><a href="../../../plc/8/a/f8d9395a3446415867df2149ea8.html" title="Минск, Белоруссия">Минск, Белоруссия</a></td>
+							<td class="ColumnType">Рождение</td>
+						</tr>
+						<tr>
+							<td class="ColumnDate">15 мар 1825 (Юлианский)</td>
+							<td class="ColumnPlace"><a href="../../../plc/8/a/f8d9395a3446415867df2149ea8.html" title="Минск, Белоруссия">Минск, Белоруссия</a></td>
+							<td class="ColumnType">Рождение</td>
+						</tr>
+						<tr>
+							<td class="ColumnDate">14 мар 1827 (Юлианский)</td>
+							<td class="ColumnPlace"><a href="../../../plc/8/a/f8d9395a3446415867df2149ea8.html" title="Минск, Белоруссия">Минск, Белоруссия</a></td>
+							<td class="ColumnType">Рождение</td>
+						</tr>
+						<tr>
+							<td class="ColumnDate">24 июн 1828 (Юлианский)</td>
+							<td class="ColumnPlace"><a href="../../../plc/8/a/f8d9395a3446415867df2149ea8.html" title="Минск, Белоруссия">Минск, Белоруссия</a></td>
+							<td class="ColumnType">Рождение</td>
+						</tr>
+						<tr>
+							<td class="ColumnDate">11 мар 1830 (Юлианский)</td>
+							<td class="ColumnPlace"><a href="../../../plc/8/a/f8d9395a3446415867df2149ea8.html" title="Минск, Белоруссия">Минск, Белоруссия</a></td>
+							<td class="ColumnType">Рождение</td>
+						</tr>
+						<tr>
+							<td class="ColumnDate">9 ноя 1832 (Юлианский)</td>
+							<td class="ColumnPlace"><a href="../../../plc/9/3/f9391ad91824a867e736e7b1039.html" title="Сторожевское кладбище, Минск, Белоруссия">Сторожевское кладбище, Минск, Белоруссия</a></td>
+							<td class="ColumnType">Захоронение</td>
+						</tr>
+						<tr>
+							<td class="ColumnDate">24 фев 1835 (Юлианский)</td>
+							<td class="ColumnPlace"><a href="../../../plc/8/a/f8d9395a3446415867df2149ea8.html" title="Минск, Белоруссия">Минск, Белоруссия</a></td>
+							<td class="ColumnType">Рождение</td>
+						</tr>
+						<tr>
+							<td class="ColumnDate">14 окт 1836 (Юлианский)</td>
+							<td class="ColumnPlace"><a href="../../../plc/8/a/f8d9395a3446415867df2149ea8.html" title="Минск, Белоруссия">Минск, Белоруссия</a></td>
+							<td class="ColumnType">Рождение</td>
+						</tr>
+						<tr>
+							<td class="ColumnDate">20 янв 1838 (Юлианский)</td>
+							<td class="ColumnPlace"><a href="../../../plc/8/a/f8d9395a3446415867df2149ea8.html" title="Минск, Белоруссия">Минск, Белоруссия</a></td>
+							<td class="ColumnType">Рождение</td>
+						</tr>
+						<tr>
+							<td class="ColumnDate">14 янв 1841 (Юлианский)</td>
+							<td class="ColumnPlace"><a href="../../../plc/8/a/f8d9395a3446415867df2149ea8.html" title="Минск, Белоруссия">Минск, Белоруссия</a></td>
+							<td class="ColumnType">Рождение</td>
+						</tr>
+						<tr>
+							<td class="ColumnDate">1846</td>
+							<td class="ColumnPlace"><a href="../../../plc/8/a/f8d9395a3446415867df2149ea8.html" title="Минск, Белоруссия">Минск, Белоруссия</a></td>
+							<td class="ColumnType">Рождение</td>
+						</tr>
+						<tr>
+							<td class="ColumnDate">18 янв 1857 (Юлианский)</td>
+							<td class="ColumnPlace"><a href="../../../plc/8/a/f8d9395a3446415867df2149ea8.html" title="Минск, Белоруссия">Минск, Белоруссия</a></td>
+							<td class="ColumnType">Брак</td>
+						</tr>
+						<tr>
+							<td class="ColumnDate">9 апр 1862 (Юлианский)</td>
+							<td class="ColumnPlace"><a href="../../../plc/8/a/f8d9395a3446415867df2149ea8.html" title="Минск, Белоруссия">Минск, Белоруссия</a></td>
+							<td class="ColumnType">Смерть</td>
+						</tr>
+						<tr>
+							<td class="ColumnDate">12 апр 1862 (Юлианский)</td>
+							<td class="ColumnPlace"><a href="../../../plc/9/3/f9391ad91824a867e736e7b1039.html" title="Сторожевское кладбище, Минск, Белоруссия">Сторожевское кладбище, Минск, Белоруссия</a></td>
+							<td class="ColumnType">Захоронение</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		<script deter="deter" style="width =100%; height =100%;" type="text/javascript">
+		
+  var marker_png = '../../../images/marker.png';
+
+		
+  window.addEventListener("load", function() {
+    var map;
+    var heat = 'markers';
+    var tracelife = [
+    [28.387040, 53.219600, 'Кринки, Бобруйский уезд, Минская губерния, Белоруссия', "<p><a href='../../../ppl/d/e/f929b7b1418656a0477af47a0ed.html' title='I0110' target='_self'>Минкевич, Онуфрий Семенович</a>:<a href='../../../evt/6/d/f929b99419c3ea97da4d3e03cd6.html' title='1796' target='_self'>Рождение</a> (1796)"],
+    [27.707520, 53.800650, 'Минск, Белоруссия', "<p><a href='../../../ppl/d/e/f929b7b1418656a0477af47a0ed.html' title='I0110' target='_self'>Минкевич, Онуфрий Семенович</a>:<a href='../../../evt/d/7/f929b9da43a699e63e5ad0c5f7d.html' title='9 апр 1862 (Юлианский)' target='_self'>Смерть</a> (9 апр 1862 (Юлианский))" + "<br><a href='../../../ppl/2/b/f929bc808512ab98e0efd825db2.html' title='I0111' target='_self'>Минкевич, Андрей Онуфриевич</a>:<a href='../../../evt/d/4/f929bcd4d6b749075c2d0d1e04d.html' title='1822' target='_self'>Рождение</a> (1822)" + "<br><a href='../../../ppl/5/3/f929b4dbdc3ff17a9b8fba5935.html' title='I0109' target='_self'>Минкевич, Мария Онуфриевна</a>:<a href='../../../evt/b/8/f929b53d2f317e88b3a6bc6378b.html' title='15 мар 1825 (Юлианский)' target='_self'>Рождение</a> (15 мар 1825 (Юлианский))" + "<br><a href='../../../ppl/7/f/f929a991cd646ad3b307d9b9cf7.html' title='I0102' target='_self'>Минкевич, Александра Онуфриевна</a>:<a href='../../../evt/a/4/f929aa2169650250a680651af4a.html' title='14 мар 1827 (Юлианский)' target='_self'>Рождение</a> (14 мар 1827 (Юлианский))" + "<br><a href='../../../ppl/0/b/f929a505dfd361896b3a39ea4b0.html' title='I0101' target='_self'>Минкевич, Анна Онуфриевна</a>:<a href='../../../evt/7/0/f929a7e87946fa2cca11c583107.html' title='24 июн 1828 (Юлианский)' target='_self'>Рождение</a> (24 июн 1828 (Юлианский))" + "<br><a href='../../../ppl/0/b/f929a505dfd361896b3a39ea4b0.html' title='I0101' target='_self'>Минкевич, Анна Онуфриевна</a>:<a href='../../../evt/8/8/f929ca69d477fec3f5b9accb988.html' title='18 янв 1857 (Юлианский)' target='_self'>Брак</a> (18 янв 1857 (Юлианский))" + "<br><a href='../../../ppl/3/f/f8fc1145fd6276ff753c2d357f3.html' title='I0077' target='_self'>Минкевич, Петр Онуфриевич</a>:<a href='../../../evt/e/6/f929eb4955c7ae49114940fea6e.html' title='11 мар 1830 (Юлианский)' target='_self'>Рождение</a> (11 мар 1830 (Юлианский))" + "<br><a href='../../../ppl/4/e/f929affac62320eebbf98283ee4.html' title='I0107' target='_self'>Минкевич, Мария Онуфриевна</a>:<a href='../../../evt/7/2/f929b05ce1658ec30743b28927.html' title='24 фев 1835 (Юлианский)' target='_self'>Рождение</a> (24 фев 1835 (Юлианский))" + "<br><a href='../../../ppl/1/b/f929ae4ef2b50e87c3a50597cb1.html' title='I0106' target='_self'>Минкевич, Екатерина Онуфриевна</a>:<a href='../../../evt/a/4/f929aeea8376451d7cd9be3954a.html' title='14 окт 1836 (Юлианский)' target='_self'>Рождение</a> (14 окт 1836 (Юлианский))" + "<br><a href='../../../ppl/9/f/f929ad394ad70029e13cfe39f9.html' title='I0105' target='_self'>Минкевич, Надежда Онуфриевна</a>:<a href='../../../evt/4/3/f929adb0b1832b817d29df2d534.html' title='20 янв 1838 (Юлианский)' target='_self'>Рождение</a> (20 янв 1838 (Юлианский))" + "<br><a href='../../../ppl/c/9/f929b0c4ab3113d3af1a754469c.html' title='I0108' target='_self'>Минкевич, София Онуфриевна</a>:<a href='../../../evt/a/0/f929b12503aa5aa5e151b7f50a.html' title='14 янв 1841 (Юлианский)' target='_self'>Рождение</a> (14 янв 1841 (Юлианский))" + "<br><a href='../../../ppl/0/1/f929f8d38eeba06c43ec044010.html' title='I0115' target='_self'>Минкевич, Сергий Онуфриевич</a>:<a href='../../../evt/3/3/f929f94257337cf0c5d1b1a9133.html' title='1846' target='_self'>Рождение</a> (1846)"],
+    [27.553804, 53.916079, 'Сторожевское кладбище, Минск, Белоруссия', "<p><a href='../../../ppl/d/e/f929b7b1418656a0477af47a0ed.html' title='I0110' target='_self'>Минкевич, Онуфрий Семенович</a>:<a href='../../../evt/f/1/f929bb9b059705ffb2f2eb0e21f.html' title='12 апр 1862 (Юлианский)' target='_self'>Захоронение</a> (12 апр 1862 (Юлианский))" + "<br><a href='../../../ppl/9/f/f929ad394ad70029e13cfe39f9.html' title='I0105' target='_self'>Минкевич, Надежда Онуфриевна</a>:<a href='../../../evt/1/4/f93c93cb8e97a3929f1c9aa5741.html' title='9 ноя 1832 (Юлианский)' target='_self'>Захоронение</a> (9 ноя 1832 (Юлианский))"],];;
+    var iconStyle = new ol.style.Style({
+      image: new ol.style.Icon(({
+        anchor: [0.2, 48],
+        anchorXUnits: 'fraction',
+        anchorYUnits: 'pixels',
+        opacity: 1.0,
+        src: marker_png
+      }))
+    });
+    var markerSource = new ol.source.Vector({
+    });
+    var centerCoord = new ol.proj.transform([27.97042200, 53.56784000], 'EPSG:4326', 'EPSG:3857');
+    var zoom = 6;
+    var radius = 0;
+    var blur = 0;
+    for (var i = 0; i < tracelife.length; i++) {
+      var loc = tracelife[i];
+      var iconFeature = new ol.Feature({
+       geometry: new ol.geom.Point(ol.proj.transform([loc[0], loc[1]],
+                                                     'EPSG:4326', 'EPSG:3857')),
+       name: loc[2],
+       data: loc[3],
+      });
+      iconFeature.setStyle(iconStyle);
+      markerSource.addFeature(iconFeature);
+    }
+    markerLayer = new ol.layer.Vector({
+      source: markerSource,
+      style: iconStyle
+    });
+    tooltip = new ol.layer.Vector({
+      source: markerSource,
+      style: iconStyle
+    });
+    heatmap = new ol.layer.Heatmap({
+      source: markerSource,
+      radius: radius,
+      blur: blur,
+      style: iconStyle
+    });
+    if (heat == "heatmap") {
+      map = new ol.Map({
+                   target: 'map_canvas',
+                   layers: [new ol.layer.Tile({ source: new ol.source.OSM() }),
+                            heatmap],
+                   view: new ol.View({ center: centerCoord, zoom: zoom })
+                   });
+    } else {
+      map = new ol.Map({
+                   target: 'map_canvas',
+                   layers: [new ol.layer.Tile({ source: new ol.source.OSM() }),
+                            markerLayer, tooltip],
+                   view: new ol.View({ center: centerCoord, zoom: zoom })
+                   });
+    };
+
+		
+    var element = document.getElementById('popup');
+    var content = document.getElementById('popup-content');
+    var ptitle = document.getElementById('popup-title');
+    var closer = document.getElementById('popup-closer');
+    var tip = document.getElementById('tooltip');
+    var tipcontent = document.getElementById('tooltip-content');
+    var tltip1 = undefined;
+    var tltip2 = undefined;
+    var tooltip = new ol.Overlay({
+      element: tip,
+      positioning: 'bottom-center',
+      offset: [10, 0],
+    });
+    map.addOverlay(tooltip);
+    var popup = new ol.Overlay({
+      element: element,
+      positioning: 'bottom-center',
+      autoPan: true,
+      autoPanAnimation: { duration: 500 },
+      stopEvent: true
+    });
+    map.addOverlay(popup);
+    /**
+     * Add a click handler to hide the popup.
+     * @return {boolean} Don't follow the href.
+     */
+    closer.onclick = function() {
+      popup.setPosition(undefined);
+      closer.blur();
+      tltip1 = undefined;
+      tltip2 = undefined;
+      return false;
+    };
+    map.on('pointermove', function(evt) {
+      evt.preventDefault()
+      if (tltip2 !== undefined) {
+        return;
+      }
+      var feature = this.forEachFeatureAtPixel(evt.pixel,
+                                               function(feature, layer) {
+        tltip1 = feature;
+        return feature;
+      });
+      map.getTargetElement().style.cursor = feature ? 'pointer' : '';
+      if (evt.dragging) {
+        tooltip.setPosition(undefined);
+        return;
+      }
+      if (feature) {
+        var coordinate = evt.coordinate;
+        tipcontent.innerHTML = feature.get('name');
+        tooltip.setPosition(coordinate);
+      } else {
+        tooltip.setPosition(undefined);
+      }
+    });
+    map.on('singleclick', function(evt) {
+      evt.preventDefault();
+      if (tltip1 !== undefined) {
+        tooltip.setPosition(undefined);
+      }
+      var feature = map.forEachFeatureAtPixel(evt.pixel,
+                                              function(feature, layer) {
+        tltip2 = feature;
+        return feature;
+      });
+      if (feature) {
+      var coordinate = evt.coordinate;
+      var title = '<h2>' + feature.get('name') + '</h2>';
+      ptitle.innerHTML = title;
+      content.innerHTML = feature.get('data');
+      popup.setPosition(coordinate);
+      }
+      });
+  });
+
+		</script>
+		</div>
+		<div class="fullclear"></div>
+		<div id="footer">
+			<p id="createdate">
+			Создано с помощью <a href="http://gramps-project.org/">Gramps</a> AIO64-6.0.1--1 в 25 фев 2026<br />Создано для Вся база данных
+			</p>
+			<p id="copyright">
+			<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License - By attribution" title="Creative Commons License - By attribution" src="../../../images/somerights20.gif" /></a>
+			</p>
+		</div>
+	</div>
+</body>
+</html>
