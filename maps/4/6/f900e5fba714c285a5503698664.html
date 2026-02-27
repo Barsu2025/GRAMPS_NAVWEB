@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html xml:lang="ru" lang="ru" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
 <head dir="ltr" lang="ru">
-	<title>Моё семейное древо - Карта семьи</title>
+	<title>Предки и потомки - Карта семьи</title>
 	<meta charset="UTF-8" />
 	<meta name ="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=0.5, maximum-scale=10.0, user-scalable=yes" />
 	<meta name ="apple-mobile-web-app-capable" content="yes" />
 	<meta name="generator" content="Gramps AIO64-6.0.1--1 http://gramps-project.org/" />
-	<meta name="author" content="" />
+	<meta name="author" content="Владимир Зверев" />
 	<meta name="robots" content="noindex" />
 	<meta name="googlebot" content="noindex" />
 	<link href="../../../images/favicon2.ico" rel="shortcut icon" type="image/x-icon" />
@@ -22,6 +22,23 @@
 	<link href="../../../css/Mainz.css" media="screen" rel="alternate stylesheet" title="Майнц" type="text/css" />
 	<link href="../../../css/Nebraska.css" media="screen" rel="alternate stylesheet" title="Небраска" type="text/css" />
 	<script>function navFunction() { var x = document.getElementById("dropmenu"); if (x.className === "nav") { x.className += " responsive"; } else { x.className = "nav"; } }</script>
+
+<script type="text/javascript">
+function toggleContent(elem, icon) {
+  // Get the DOM reference
+  var contentId = document.getElementById(elem);
+  var icon = document.getElementById(icon);
+  // Toggle
+  if (contentId.style.display == "block") {
+    contentId.style.display = "none";
+    icon.className = 'icon icon-close';
+  } else {
+    contentId.style.display = "block";
+    icon.className = 'icon icon-open';
+  };
+}
+</script>
+
 	<link href="../../../css/narrative-maps.css" media="screen" rel="stylesheet" type="text/css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
 	<script src="https://openlayers.org/en/v6.15.1/build/ol.js" type="text/javascript"></script>
@@ -31,13 +48,14 @@
 	<div id="outerwrapper">
 		<div class="ltr" id="header">
 			<button href="javascript:void(0);" class="navIcon" onclick="navFunction()">&#8801;</button>
-			<h1 class="nav" id="SiteTitle">Моё семейное древо</h1>
+			<h1 class="nav" id="SiteTitle">Предки и потомки</h1>
 		</div>
 		<div class="wrappernav ltr" id="nav" role="navigation">
 			<div class="container">
 				<ul class="nav" id="dropmenu">
+					<li><a href="../../../index.html" title="Домой">Домой</a></li>
 					<li><a href="../../../individuals.html" title="Люди">Люди</a></li>
-					<li><a href="../../../index.html" title="Фамилии">Фамилии</a></li>
+					<li><a href="../../../surnames.html" title="Фамилии">Фамилии</a></li>
 					<li><a href="../../../families.html" title="Семьи">Семьи</a></li>
 					<li><a href="../../../events.html" title="События">События</a></li>
 					<li><a href="../../../places.html" title="Места">Места</a></li>
@@ -45,8 +63,12 @@
 					<li><a href="../../../sources.html" title="Источники">Источники</a></li>
 					<li><a href="../../../repositories.html" title="Хранилища">Хранилища</a></li>
 					<li><a href="../../../media.html" title="Альбом">Альбом</a></li>
+					<li><a href="../../../addressbook.html" title="Адресная книга">Адресная книга</a></li>
 					<li><a href="../../../updates.html" title="Обновления">Обновления</a></li>
+					<li><a href="../../../statistics.html" title="Статистика">Статистика</a></li>
 					<li><a href="../../../cal/2026/index.html" title="Веб-календарь">Веб-календарь</a></li>
+					<li><a onclick="history.go(-1);">Предыдущее</a></li>
+					<li><a onclick="history.go(+1);">Следующее</a></li>
 				</ul>
 			</div>
 		</div>
@@ -288,7 +310,7 @@ function GoToTop() {
 		<div class="fullclear"></div>
 		<div id="footer">
 			<p id="createdate">
-			Создано с помощью <a href="http://gramps-project.org/">Gramps</a> AIO64-6.0.1--1 в 25 фев 2026<br />Создано для Вся база данных
+			Создано с помощью <a href="http://gramps-project.org/">Gramps</a> AIO64-6.0.1--1 в 26 фев 2026<br />Создано для Вся база данных
 			</p>
 			<p id="copyright">
 			<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License - By attribution" title="Creative Commons License - By attribution" src="../../../images/somerights20.gif" /></a>

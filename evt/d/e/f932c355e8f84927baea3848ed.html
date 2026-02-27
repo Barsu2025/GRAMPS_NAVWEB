@@ -22,6 +22,23 @@
 	<link href="../../../css/Mainz.css" media="screen" rel="alternate stylesheet" title="Майнц" type="text/css" />
 	<link href="../../../css/Nebraska.css" media="screen" rel="alternate stylesheet" title="Небраска" type="text/css" />
 	<script>function navFunction() { var x = document.getElementById("dropmenu"); if (x.className === "nav") { x.className += " responsive"; } else { x.className = "nav"; } }</script>
+
+<script type="text/javascript">
+function toggleContent(elem, icon) {
+  // Get the DOM reference
+  var contentId = document.getElementById(elem);
+  var icon = document.getElementById(icon);
+  // Toggle
+  if (contentId.style.display == "block") {
+    contentId.style.display = "none";
+    icon.className = 'icon icon-close';
+  } else {
+    contentId.style.display = "block";
+    icon.className = 'icon icon-open';
+  };
+}
+</script>
+
 </head>
 <body dir="ltr">
 	<div id="outerwrapper">
@@ -32,8 +49,9 @@
 		<div class="wrappernav ltr" id="nav" role="navigation">
 			<div class="container">
 				<ul class="nav" id="dropmenu">
+					<li><a href="../../../index.html" title="Домой">Домой</a></li>
 					<li><a href="../../../individuals.html" title="Люди">Люди</a></li>
-					<li><a href="../../../index.html" title="Фамилии">Фамилии</a></li>
+					<li><a href="../../../surnames.html" title="Фамилии">Фамилии</a></li>
 					<li><a href="../../../families.html" title="Семьи">Семьи</a></li>
 					<li class = "CurrentSection"><a href="../../../events.html" title="События">События</a></li>
 					<li><a href="../../../places.html" title="Места">Места</a></li>
@@ -41,8 +59,11 @@
 					<li><a href="../../../sources.html" title="Источники">Источники</a></li>
 					<li><a href="../../../repositories.html" title="Хранилища">Хранилища</a></li>
 					<li><a href="../../../media.html" title="Альбом">Альбом</a></li>
+					<li><a href="../../../download.html" title="Загрузить">Загрузить</a></li>
 					<li><a href="../../../updates.html" title="Обновления">Обновления</a></li>
 					<li><a href="../../../cal/2026/index.html" title="Веб-календарь">Веб-календарь</a></li>
+					<li><a onclick="history.go(-1);">Предыдущее</a></li>
+					<li><a onclick="history.go(+1);">Следующее</a></li>
 				</ul>
 			</div>
 		</div>

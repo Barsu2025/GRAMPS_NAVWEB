@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html xml:lang="ru" lang="ru" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
 <head dir="ltr" lang="ru">
-	<title>Моё семейное древо - События</title>
+	<title>Предки и потомки - События</title>
 	<meta charset="UTF-8" />
 	<meta name ="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=0.5, maximum-scale=10.0, user-scalable=yes" />
 	<meta name ="apple-mobile-web-app-capable" content="yes" />
 	<meta name="generator" content="Gramps AIO64-6.0.1--1 http://gramps-project.org/" />
-	<meta name="author" content="" />
+	<meta name="author" content="Владимир Зверев" />
 	<meta name="robots" content="noindex" />
 	<meta name="googlebot" content="noindex" />
 	<link href="images/favicon2.ico" rel="shortcut icon" type="image/x-icon" />
@@ -22,18 +22,36 @@
 	<link href="css/Mainz.css" media="screen" rel="alternate stylesheet" title="Майнц" type="text/css" />
 	<link href="css/Nebraska.css" media="screen" rel="alternate stylesheet" title="Небраска" type="text/css" />
 	<script>function navFunction() { var x = document.getElementById("dropmenu"); if (x.className === "nav") { x.className += " responsive"; } else { x.className = "nav"; } }</script>
+
+<script type="text/javascript">
+function toggleContent(elem, icon) {
+  // Get the DOM reference
+  var contentId = document.getElementById(elem);
+  var icon = document.getElementById(icon);
+  // Toggle
+  if (contentId.style.display == "block") {
+    contentId.style.display = "none";
+    icon.className = 'icon icon-close';
+  } else {
+    contentId.style.display = "block";
+    icon.className = 'icon icon-open';
+  };
+}
+</script>
+
 </head>
 <body dir="ltr">
 	<div id="outerwrapper">
 		<div class="ltr" id="header">
 			<button href="javascript:void(0);" class="navIcon" onclick="navFunction()">&#8801;</button>
-			<h1 class="nav" id="SiteTitle">Моё семейное древо</h1>
+			<h1 class="nav" id="SiteTitle">Предки и потомки</h1>
 		</div>
 		<div class="wrappernav ltr" id="nav" role="navigation">
 			<div class="container">
 				<ul class="nav" id="dropmenu">
+					<li><a href="index.html" title="Домой">Домой</a></li>
 					<li><a href="individuals.html" title="Люди">Люди</a></li>
-					<li><a href="index.html" title="Фамилии">Фамилии</a></li>
+					<li><a href="surnames.html" title="Фамилии">Фамилии</a></li>
 					<li><a href="families.html" title="Семьи">Семьи</a></li>
 					<li class = "CurrentSection"><a href="events.html" title="События">События</a></li>
 					<li><a href="places.html" title="Места">Места</a></li>
@@ -41,8 +59,12 @@
 					<li><a href="sources.html" title="Источники">Источники</a></li>
 					<li><a href="repositories.html" title="Хранилища">Хранилища</a></li>
 					<li><a href="media.html" title="Альбом">Альбом</a></li>
+					<li><a href="addressbook.html" title="Адресная книга">Адресная книга</a></li>
 					<li><a href="updates.html" title="Обновления">Обновления</a></li>
+					<li><a href="statistics.html" title="Статистика">Статистика</a></li>
 					<li><a href="cal/2026/index.html" title="Веб-календарь">Веб-календарь</a></li>
+					<li><a onclick="history.go(-1);">Предыдущее</a></li>
+					<li><a onclick="history.go(+1);">Следующее</a></li>
 				</ul>
 			</div>
 		</div>
@@ -120,18 +142,6 @@ function GoToTop() {
 							<span class="mother"><a href="ppl/5/e/f8ea27fe267b6a2b344d4b7e5.html">Радзиминская-Францкевич Минкевич, Лидия Ивановна</a></span>
 						</td>
 					</tr>
-					<tr>
-						<td class="ColumnLetter"></td>
-						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
-						<td class="ColumnDate">19 сен 1991</td>
-						<td class="ColumnGRAMPSID">
-							<a href="./evt/6/e/f98007c94692649d4b2c9909e6.html" title="E0176">E0176</a>
-						</td>
-						<td class="ColumnPerson">
-							<span class="father"><a href="ppl/f/9/f9131424ffb288e55c1b587fa9f.html">Васильев, Олег Евгеньевич</a></span>
-							<span class="mother"><a href="ppl/5/3/f8dc372aaa861b2d0e8a0c40f35.html">Зверева Васильева Архипова Брик, Мария Ильинична</a></span>
-						</td>
-					</tr>
 					<tr class = "BeginType">
 						<td class="ColumnLetter"></td>
 						<td class="ColumnType" title="Ранение">Ранение</td>
@@ -201,6 +211,50 @@ function GoToTop() {
 					<tr class = "BeginType">
 						<td class="ColumnLetter"></td>
 						<td class="ColumnType" title="Рождение">Рождение</td>
+						<td class="ColumnDate"></td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/b/9/101df8c4310672283ced22c77b9b.html" title="E10022">E10022</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/2/1/f8dcad7d493768e79f4f33c8912.html">Зверев, Юрий Анатольевич</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate"></td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/3/9/101df9142f77437d25a07d4c3a93.html" title="E10024">E10024</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/d/0/1010efd112f96473fc7ed83e7c0d.html">Ширман, Михаил Александрович</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate"></td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/b/0/101df91620f5630ba94e30083b0b.html" title="E10026">E10026</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/6/0/1010efa34cda61e4b1ef5e9d0406.html">Ширман, Григорий Моисеевич</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
+						<td class="ColumnDate"></td>
+						<td class="ColumnGRAMPSID">
+							<a href="./evt/0/2/101df9182e495913e1935c183e20.html" title="E10028">E10028</a>
+						</td>
+						<td class="ColumnPerson">
+							<span class="person"><a href="ppl/a/b/1010ef6fbfb2a51ecb697f0aba.html">Ширман, Моисей Симонович</a></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="ColumnLetter"></td>
+						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
 						<td class="ColumnDate"></td>
 						<td class="ColumnGRAMPSID">
 							<a href="./evt/b/d/f8e569ee6176a8d1e78985926db.html" title="E0044">E0044</a>
@@ -1092,17 +1146,6 @@ function GoToTop() {
 					<tr>
 						<td class="ColumnLetter"></td>
 						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
-						<td class="ColumnDate">26 авг 1935</td>
-						<td class="ColumnGRAMPSID">
-							<a href="./evt/6/d/f983c3441244eb45c879cd259d6.html" title="E0191">E0191</a>
-						</td>
-						<td class="ColumnPerson">
-							<span class="person"><a href="ppl/0/a/f8dc3b43b4b6d2f469dd57954a0.html">Завадский, Александр Алексеевич</a></span>
-						</td>
-					</tr>
-					<tr>
-						<td class="ColumnLetter"></td>
-						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
 						<td class="ColumnDate">13 фев 1937</td>
 						<td class="ColumnGRAMPSID">
 							<a href="./evt/3/3/f8d93e32d213fa9718d5b187033.html" title="E0001">E0001</a>
@@ -1120,17 +1163,6 @@ function GoToTop() {
 						</td>
 						<td class="ColumnPerson">
 							<span class="person"><a href="ppl/d/b/f8dc3ba7c875260c26e67e3d5bd.html">Архипова Брик, Сусанна Ильинична</a></span>
-						</td>
-					</tr>
-					<tr>
-						<td class="ColumnLetter"></td>
-						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
-						<td class="ColumnDate">12 мар 1942</td>
-						<td class="ColumnGRAMPSID">
-							<a href="./evt/c/3/f8d940d2cb94e2bf1df1cc6c13c.html" title="E0003">E0003</a>
-						</td>
-						<td class="ColumnPerson">
-							<span class="person"><a href="ppl/0/b/f8d90d57b883abd4d683422edb0.html">Зверева Сальникова, Лилия Васильевна</a></span>
 						</td>
 					</tr>
 					<tr>
@@ -1155,145 +1187,13 @@ function GoToTop() {
 							<span class="person"><a href="ppl/f/2/f8dbfb38399236a8b8194b83c2f.html">Зверева, Татьяна Игоревна</a></span>
 						</td>
 					</tr>
-					<tr>
-						<td class="ColumnLetter"></td>
-						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
-						<td class="ColumnDate">15 окт 1968</td>
-						<td class="ColumnGRAMPSID">
-							<a href="./evt/9/9/f8dc0a48b705cd818a21e343899.html" title="E0011">E0011</a>
-						</td>
-						<td class="ColumnPerson">
-							<span class="person"><a href="ppl/e/d/f8d90ad414933b13810b0253ade.html">Зверев, Владимир Игоревич</a></span>
-						</td>
-					</tr>
-					<tr>
-						<td class="ColumnLetter"></td>
-						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
-						<td class="ColumnDate">около 1971</td>
-						<td class="ColumnGRAMPSID">
-							<a href="./evt/5/4/f91314bcf765966cf943374645.html" title="E0089">E0089</a>
-						</td>
-						<td class="ColumnPerson">
-							<span class="person"><a href="ppl/f/9/f9131424ffb288e55c1b587fa9f.html">Васильев, Олег Евгеньевич</a></span>
-						</td>
-					</tr>
-					<tr>
-						<td class="ColumnLetter"></td>
-						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
-						<td class="ColumnDate">2 мар 1973</td>
-						<td class="ColumnGRAMPSID">
-							<a href="./evt/6/1/f8dc37e73216369af95d7782c16.html" title="E0013">E0013</a>
-						</td>
-						<td class="ColumnPerson">
-							<span class="person"><a href="ppl/5/3/f8dc372aaa861b2d0e8a0c40f35.html">Зверева Васильева Архипова Брик, Мария Ильинична</a></span>
-						</td>
-					</tr>
-					<tr>
-						<td class="ColumnLetter"></td>
-						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
-						<td class="ColumnDate">23 апр 1984</td>
-						<td class="ColumnGRAMPSID">
-							<a href="./evt/0/e/f98ff0b29e727d9b074130f52e0.html" title="E0192">E0192</a>
-						</td>
-						<td class="ColumnPerson">
-							<span class="person"><a href="ppl/b/3/f98fefd9b1043c619651e974b3b.html">Саницка Зверева Татарёнок, Мария Александровна</a></span>
-						</td>
-					</tr>
-					<tr>
-						<td class="ColumnLetter"></td>
-						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
-						<td class="ColumnDate">19 апр 1990</td>
-						<td class="ColumnGRAMPSID">
-							<a href="./evt/d/3/f91315dfe636102169e1741823d.html" title="E0090">E0090</a>
-						</td>
-						<td class="ColumnPerson">
-							<span class="person"><a href="ppl/2/9/f91314e77685eee553cf1e24d92.html">Семенкович Васильева, Надежда Олеговна</a></span>
-						</td>
-					</tr>
-					<tr>
-						<td class="ColumnLetter"></td>
-						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
-						<td class="ColumnDate">20 авг 1990</td>
-						<td class="ColumnGRAMPSID">
-							<a href="./evt/e/8/f91318de6351e6bb7129688288e.html" title="E0091">E0091</a>
-						</td>
-						<td class="ColumnPerson">
-							<span class="person"><a href="ppl/d/1/f913175fb7162e1abcda41f371d.html">Семенкович, Максим Александрович</a></span>
-						</td>
-					</tr>
-					<tr>
-						<td class="ColumnLetter"></td>
-						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
-						<td class="ColumnDate">28 июл 1997</td>
-						<td class="ColumnGRAMPSID">
-							<a href="./evt/d/e/f9130fd83362885d41cee394eed.html" title="E0083">E0083</a>
-						</td>
-						<td class="ColumnPerson">
-							<span class="person"><a href="ppl/e/e/f9130eaf0116a9a7b6858a03fee.html">Зверев, Илья Владимирович</a></span>
-						</td>
-					</tr>
-					<tr>
-						<td class="ColumnLetter"></td>
-						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
-						<td class="ColumnDate">27 июл 1998</td>
-						<td class="ColumnGRAMPSID">
-							<a href="./evt/b/2/f913109c13815afe88f3b6f2b.html" title="E0084">E0084</a>
-						</td>
-						<td class="ColumnPerson">
-							<span class="person"><a href="ppl/e/5/f91310148623f6862f44f00865e.html">Зверев, Михаил Владимирович</a></span>
-						</td>
-					</tr>
-					<tr>
-						<td class="ColumnLetter"></td>
-						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
-						<td class="ColumnDate">8 июл 2000</td>
-						<td class="ColumnGRAMPSID">
-							<a href="./evt/2/e/f913116999436f6d82e34dce9e2.html" title="E0085">E0085</a>
-						</td>
-						<td class="ColumnPerson">
-							<span class="person"><a href="ppl/2/e/f91310ce42a1a762815c41f33e2.html">Зверева, София Владимировна</a></span>
-						</td>
-					</tr>
-					<tr>
-						<td class="ColumnLetter"></td>
-						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
-						<td class="ColumnDate">26 авг 2001</td>
-						<td class="ColumnGRAMPSID">
-							<a href="./evt/b/3/f913125f92131cb4cc74fb9c13b.html" title="E0087">E0087</a>
-						</td>
-						<td class="ColumnPerson">
-							<span class="person"><a href="ppl/8/4/f9131206427719826b489048a48.html">Зверев, Григорий Владимирович</a></span>
-						</td>
-					</tr>
-					<tr>
-						<td class="ColumnLetter"></td>
-						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
-						<td class="ColumnDate">7 мар 2005</td>
-						<td class="ColumnGRAMPSID">
-							<a href="./evt/9/c/f91312fa1922cd4377be07ae2c9.html" title="E0088">E0088</a>
-						</td>
-						<td class="ColumnPerson">
-							<span class="person"><a href="ppl/3/0/f9131293698617bcca320840c03.html">Зверева, Виктория Владимировна</a></span>
-						</td>
-					</tr>
-					<tr>
-						<td class="ColumnLetter"></td>
-						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
-						<td class="ColumnDate">2015</td>
-						<td class="ColumnGRAMPSID">
-							<a href="./evt/c/8/f9131a50a7649c654a86dd2688c.html" title="E0092">E0092</a>
-						</td>
-						<td class="ColumnPerson">
-							<span class="person"><a href="ppl/4/e/f91319a056c56f74833c639bbe4.html">Семенкович, Василиса Максимовна</a></span>
-						</td>
-					</tr>
 				</tbody>
 			</table>
 		</div>
 		<div class="fullclear"></div>
 		<div id="footer">
 			<p id="createdate">
-			Создано с помощью <a href="http://gramps-project.org/">Gramps</a> AIO64-6.0.1--1<br />Последнее изменение было сделано 2026-02-24 14:03:08<br />Создано для Вся база данных
+			Создано с помощью <a href="http://gramps-project.org/">Gramps</a> AIO64-6.0.1--1<br />Последнее изменение было сделано 2026-02-26 10:45:20<br />Создано для Вся база данных
 			</p>
 			<p id="copyright">
 			<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License - By attribution" title="Creative Commons License - By attribution" src="images/somerights20.gif" /></a>

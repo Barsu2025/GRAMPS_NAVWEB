@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html xml:lang="ru" lang="ru" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
 <head dir="ltr" lang="ru">
-	<title>Моё семейное древо - Альбом</title>
+	<title>Предки и потомки - Альбом</title>
 	<meta charset="UTF-8" />
 	<meta name ="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=0.5, maximum-scale=10.0, user-scalable=yes" />
 	<meta name ="apple-mobile-web-app-capable" content="yes" />
 	<meta name="generator" content="Gramps AIO64-6.0.1--1 http://gramps-project.org/" />
-	<meta name="author" content="" />
+	<meta name="author" content="Владимир Зверев" />
 	<meta name="robots" content="noindex" />
 	<meta name="googlebot" content="noindex" />
 	<link href="images/favicon2.ico" rel="shortcut icon" type="image/x-icon" />
@@ -22,18 +22,36 @@
 	<link href="css/Mainz.css" media="screen" rel="alternate stylesheet" title="Майнц" type="text/css" />
 	<link href="css/Nebraska.css" media="screen" rel="alternate stylesheet" title="Небраска" type="text/css" />
 	<script>function navFunction() { var x = document.getElementById("dropmenu"); if (x.className === "nav") { x.className += " responsive"; } else { x.className = "nav"; } }</script>
+
+<script type="text/javascript">
+function toggleContent(elem, icon) {
+  // Get the DOM reference
+  var contentId = document.getElementById(elem);
+  var icon = document.getElementById(icon);
+  // Toggle
+  if (contentId.style.display == "block") {
+    contentId.style.display = "none";
+    icon.className = 'icon icon-close';
+  } else {
+    contentId.style.display = "block";
+    icon.className = 'icon icon-open';
+  };
+}
+</script>
+
 </head>
 <body dir="ltr">
 	<div id="outerwrapper">
 		<div class="ltr" id="header">
 			<button href="javascript:void(0);" class="navIcon" onclick="navFunction()">&#8801;</button>
-			<h1 class="nav" id="SiteTitle">Моё семейное древо</h1>
+			<h1 class="nav" id="SiteTitle">Предки и потомки</h1>
 		</div>
 		<div class="wrappernav ltr" id="nav" role="navigation">
 			<div class="container">
 				<ul class="nav" id="dropmenu">
+					<li><a href="index.html" title="Домой">Домой</a></li>
 					<li><a href="individuals.html" title="Люди">Люди</a></li>
-					<li><a href="index.html" title="Фамилии">Фамилии</a></li>
+					<li><a href="surnames.html" title="Фамилии">Фамилии</a></li>
 					<li><a href="families.html" title="Семьи">Семьи</a></li>
 					<li><a href="events.html" title="События">События</a></li>
 					<li><a href="places.html" title="Места">Места</a></li>
@@ -41,8 +59,12 @@
 					<li><a href="sources.html" title="Источники">Источники</a></li>
 					<li><a href="repositories.html" title="Хранилища">Хранилища</a></li>
 					<li class = "CurrentSection"><a href="media.html" title="Альбом">Альбом</a></li>
+					<li><a href="addressbook.html" title="Адресная книга">Адресная книга</a></li>
 					<li><a href="updates.html" title="Обновления">Обновления</a></li>
+					<li><a href="statistics.html" title="Статистика">Статистика</a></li>
 					<li><a href="cal/2026/index.html" title="Веб-календарь">Веб-календарь</a></li>
+					<li><a onclick="history.go(-1);">Предыдущее</a></li>
+					<li><a onclick="history.go(+1);">Следующее</a></li>
 				</ul>
 			</div>
 		</div>
@@ -1360,22 +1382,6 @@ function GoToTop() {
 						80
 						</td>
 						<td class="ColumnName">
-							<a href="img/a/a/f8f334af20654f3d34439a342aa.html" title="Зверева Л.В_cr">
-							Зверева Л.В_cr
-							</a>
-						</td>
-						<td class="ColumnDate">
-						
-						</td>
-						<td class="ColumnMime">
-						image/jpeg
-						</td>
-					</tr>
-					<tr>
-						<td class="ColumnRowLabel">
-						81
-						</td>
-						<td class="ColumnName">
 							<a href="img/c/9/f90feb74dbc4888bd611625399c.html" title="Личная карточка представляемого к вручению медали «За оборону Ленинграда»">
 							Личная карточка представляемого к вручению медали «За оборону Ленинграда»
 							</a>
@@ -1389,7 +1395,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						82
+						81
 						</td>
 						<td class="ColumnName">
 							<a href="img/2/9/f8f339206503131ac35da3fdc92.html" title="Макеева П.М">
@@ -1405,7 +1411,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						83
+						82
 						</td>
 						<td class="ColumnName">
 							<a href="img/7/f/f9c120a802cb86ce11a0ee0ff7.html" title="Медаль «За боевые заслуги»">
@@ -1421,7 +1427,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						84
+						83
 						</td>
 						<td class="ColumnName">
 							<a href="img/8/f/f9c133ef7e5310aaf8b2c9350f8.html" title="Медаль «За взятие Берлина»">
@@ -1437,7 +1443,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						85
+						84
 						</td>
 						<td class="ColumnName">
 							<a href="img/5/2/f9c1113915c5fcc6dde3380ad25.html" title="Медаль «За оборону Кавказа»">
@@ -1453,7 +1459,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						86
+						85
 						</td>
 						<td class="ColumnName">
 							<a href="img/8/7/f9c130d391d6a14e62ed8ac5778.html" title="Медаль «За освобождение Варшавы»">
@@ -1469,7 +1475,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						87
+						86
 						</td>
 						<td class="ColumnName">
 							<a href="img/0/e/f9c1105a1312f6543028e257ee0.html" title="Медаль «За победу над Германией в Великой Отечественной войне 1941–1945 гг.»">
@@ -1485,7 +1491,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						88
+						87
 						</td>
 						<td class="ColumnName">
 							<a href="img/1/d/f9c1354f601117bbbadaff957d1.html" title="Орден Отечественной войны II степени">
@@ -1501,7 +1507,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						89
+						88
 						</td>
 						<td class="ColumnName">
 							<a href="img/5/c/f92ccb7261d3ea2a843b3869dc5.html" title="Памятная книжка Минской губернии...на 1870 год с.19(и.23)">
@@ -1517,7 +1523,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						90
+						89
 						</td>
 						<td class="ColumnName">
 							<a href="img/3/9/f9bdecd4dfa6414295d3980f293.html" title="Плешунино(Пуманово) и окрестности">
@@ -1533,7 +1539,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						91
+						90
 						</td>
 						<td class="ColumnName">
 							<a href="img/b/4/f8fcd4000cf239681634e532c4b.html" title="Представление к награде Сальникова Савелия (зол. медаль на Аннин.л.)">
@@ -1549,7 +1555,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						92
+						91
 						</td>
 						<td class="ColumnName">
 							<a href="img/b/4/f8fcd4332eb77e1d2efe7416a4b.html" title="Представление к награде Сальникова Савелия (зол. медаль на Аннин.л.) об.">
@@ -1565,7 +1571,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						93
+						92
 						</td>
 						<td class="ColumnName">
 							<a href="img/5/c/f8f3176a4a36a346359b88b73c5.html" title="Сальников А.С.ГАРяз.О_Ф627_280_231_с.PDF_с115">
@@ -1581,7 +1587,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						94
+						93
 						</td>
 						<td class="ColumnName">
 							<a href="img/e/3/f8f33727d3b7c1b58dfd382213e.html" title="Сальников В.С">
@@ -1597,7 +1603,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						95
+						94
 						</td>
 						<td class="ColumnName">
 							<a href="img/d/2/f8fccbebe765e642269b548022d.html" title="Сальников С.М">
@@ -1613,7 +1619,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						96
+						95
 						</td>
 						<td class="ColumnName">
 							<a href="img/7/a/f8fcccda425332ff58628d7e2a7.html" title="Сальников С.М. в старости">
@@ -1629,7 +1635,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						97
+						96
 						</td>
 						<td class="ColumnName">
 							<a href="img/3/e/f8f337db54d690a519e9b4d50e3.html" title="Сальникова(Макеева)М.А.">
@@ -1645,7 +1651,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						98
+						97
 						</td>
 						<td class="ColumnName">
 							<a href="img/4/2/f9b3a3e8e014199c7b96469e524.html" title="Свидетельство о смерти Архиповой Зои Васильевны">
@@ -1661,7 +1667,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						99
+						98
 						</td>
 						<td class="ColumnName">
 							<a href="img/9/f/f9c081fab2759264dc3ef2714f9.html" title="СПб Сенатския объявления о запрещениях 1849.06.22 с.10">
@@ -1677,7 +1683,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						100
+						99
 						</td>
 						<td class="ColumnName">
 							<a href="img/a/0/f9c08862f8a969fb6580435e0a.html" title="СПб Сенатския объявления по судебным, распорядительным, политическим и казенным делам департаментов объявления 1843.11.11, с.10">
@@ -1693,7 +1699,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						101
+						100
 						</td>
 						<td class="ColumnName">
 							<a href="img/1/a/f8f3306276b5d99e00f6fae34a1.html" title="Тамара Чернова_cr">
@@ -1709,7 +1715,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						102
+						101
 						</td>
 						<td class="ColumnName">
 							<a href="img/0/0/f8f5e4252b4604be26c47fa3b00.html" title="Уведомление о приеме раненого Чернова В.А">
@@ -1725,7 +1731,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						103
+						102
 						</td>
 						<td class="ColumnName">
 							<a href="img/8/e/f90feb9011b45c3679601df32e8.html" title="ЦГА СПб ф.Р-7384 оп.38 д.123">
@@ -1741,7 +1747,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						104
+						103
 						</td>
 						<td class="ColumnName">
 							<a href="img/2/d/f90feb7ca0fa410d70112652d2.html" title="ЦГА СПб ф.Р-7384 оп.38 д.123(2)">
@@ -1757,7 +1763,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						105
+						104
 						</td>
 						<td class="ColumnName">
 							<a href="img/9/8/f8f34bbaf51767a25c3d0a6bb89.html" title="ЦГИАСПб_2308_1_6_0018">
@@ -1773,7 +1779,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						106
+						105
 						</td>
 						<td class="ColumnName">
 							<a href="img/a/6/f96a48a091a41744ae75803166a.html" title="Церковь Александра и Антонины в Селищах">
@@ -1789,7 +1795,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						107
+						106
 						</td>
 						<td class="ColumnName">
 							<a href="img/b/3/f96a4b593cd6b962be27508003b.html" title="Церковь Александра и Антонины в Селищах(2)">
@@ -1805,7 +1811,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						108
+						107
 						</td>
 						<td class="ColumnName">
 							<a href="img/b/8/1017c368361b6e2f9734d25f4d8b.html" title="Чернов Гордей древо">
@@ -1821,7 +1827,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						109
+						108
 						</td>
 						<td class="ColumnName">
 							<a href="img/f/8/f9c1379b34778ef153343ee6a8f.html" title="Чернов Марк Владимирович">
@@ -1837,7 +1843,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						110
+						109
 						</td>
 						<td class="ColumnName">
 							<a href="img/5/4/f9c137e1a16439b391a17043145.html" title="Чернов Марк Владимирович">
@@ -1853,7 +1859,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						111
+						110
 						</td>
 						<td class="ColumnName">
 							<a href="img/1/c/f9c138b02fb20bd42e67db77dc1.html" title="Чернов Марк Владимирович">
@@ -1869,7 +1875,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						112
+						111
 						</td>
 						<td class="ColumnName">
 							<a href="img/0/0/f95a2641fd427067d1dd8050c00.html" title="Чернова (Гарибина) Мария">
@@ -1885,7 +1891,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnRowLabel">
-						113
+						112
 						</td>
 						<td class="ColumnName">
 							<a href="img/8/6/f8f31ebcae3568c5dfaeca7d568.html" title="Чернова М.И">

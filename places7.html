@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html xml:lang="ru" lang="ru" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
 <head dir="ltr" lang="ru">
-	<title>Моё семейное древо - Места</title>
+	<title>Предки и потомки - Места</title>
 	<meta charset="UTF-8" />
 	<meta name ="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=0.5, maximum-scale=10.0, user-scalable=yes" />
 	<meta name ="apple-mobile-web-app-capable" content="yes" />
 	<meta name="generator" content="Gramps AIO64-6.0.1--1 http://gramps-project.org/" />
-	<meta name="author" content="" />
+	<meta name="author" content="Владимир Зверев" />
 	<meta name="robots" content="noindex" />
 	<meta name="googlebot" content="noindex" />
 	<link href="images/favicon2.ico" rel="shortcut icon" type="image/x-icon" />
@@ -22,18 +22,36 @@
 	<link href="css/Mainz.css" media="screen" rel="alternate stylesheet" title="Майнц" type="text/css" />
 	<link href="css/Nebraska.css" media="screen" rel="alternate stylesheet" title="Небраска" type="text/css" />
 	<script>function navFunction() { var x = document.getElementById("dropmenu"); if (x.className === "nav") { x.className += " responsive"; } else { x.className = "nav"; } }</script>
+
+<script type="text/javascript">
+function toggleContent(elem, icon) {
+  // Get the DOM reference
+  var contentId = document.getElementById(elem);
+  var icon = document.getElementById(icon);
+  // Toggle
+  if (contentId.style.display == "block") {
+    contentId.style.display = "none";
+    icon.className = 'icon icon-close';
+  } else {
+    contentId.style.display = "block";
+    icon.className = 'icon icon-open';
+  };
+}
+</script>
+
 </head>
 <body dir="ltr">
 	<div id="outerwrapper">
 		<div class="ltr" id="header">
 			<button href="javascript:void(0);" class="navIcon" onclick="navFunction()">&#8801;</button>
-			<h1 class="nav" id="SiteTitle">Моё семейное древо</h1>
+			<h1 class="nav" id="SiteTitle">Предки и потомки</h1>
 		</div>
 		<div class="wrappernav ltr" id="nav" role="navigation">
 			<div class="container">
 				<ul class="nav" id="dropmenu">
+					<li><a href="index.html" title="Домой">Домой</a></li>
 					<li><a href="individuals.html" title="Люди">Люди</a></li>
-					<li><a href="index.html" title="Фамилии">Фамилии</a></li>
+					<li><a href="surnames.html" title="Фамилии">Фамилии</a></li>
 					<li><a href="families.html" title="Семьи">Семьи</a></li>
 					<li><a href="events.html" title="События">События</a></li>
 					<li class = "CurrentSection"><a href="places.html" title="Места">Места</a></li>
@@ -41,8 +59,12 @@
 					<li><a href="sources.html" title="Источники">Источники</a></li>
 					<li><a href="repositories.html" title="Хранилища">Хранилища</a></li>
 					<li><a href="media.html" title="Альбом">Альбом</a></li>
+					<li><a href="addressbook.html" title="Адресная книга">Адресная книга</a></li>
 					<li><a href="updates.html" title="Обновления">Обновления</a></li>
+					<li><a href="statistics.html" title="Статистика">Статистика</a></li>
 					<li><a href="cal/2026/index.html" title="Веб-календарь">Веб-календарь</a></li>
+					<li><a onclick="history.go(-1);">Предыдущее</a></li>
+					<li><a onclick="history.go(+1);">Следующее</a></li>
 				</ul>
 			</div>
 		</div>
@@ -88,20 +110,19 @@ function GoToTop() {
 					<li><a href="places2.html" title="Alphabet Menu: Б">Б</a></li>
 					<li><a href="places3.html" title="Alphabet Menu: В">В</a></li>
 					<li><a href="places4.html" title="Alphabet Menu: Г">Г</a></li>
-					<li><a href="places5.html" title="Alphabet Menu: Д">Д</a></li>
-					<li><a href="places6.html" title="Alphabet Menu: Е">Е</a></li>
-					<li class = "CurrentSection"><a href="places7.html" title="Alphabet Menu: З">З</a></li>
-					<li><a href="places8.html" title="Alphabet Menu: К">К</a></li>
-					<li><a href="places9.html" title="Alphabet Menu: М">М</a></li>
-					<li><a href="places10.html" title="Alphabet Menu: Н">Н</a></li>
-					<li><a href="places11.html" title="Alphabet Menu: П">П</a></li>
-					<li><a href="places12.html" title="Alphabet Menu: С">С</a></li>
-					<li><a href="places13.html" title="Alphabet Menu: Т">Т</a></li>
-					<li><a href="places14.html" title="Alphabet Menu: Ф">Ф</a></li>
-					<li><a href="places15.html" title="Alphabet Menu: Х">Х</a></li>
-					<li><a href="places16.html" title="Alphabet Menu: Ц">Ц</a></li>
-					<li><a href="places17.html" title="Alphabet Menu: Ч">Ч</a></li>
-					<li><a href="places18.html" title="Alphabet Menu: Ш">Ш</a></li>
+					<li><a href="places5.html" title="Alphabet Menu: Е">Е</a></li>
+					<li><a href="places6.html" title="Alphabet Menu: З">З</a></li>
+					<li class = "CurrentSection"><a href="places7.html" title="Alphabet Menu: К">К</a></li>
+					<li><a href="places8.html" title="Alphabet Menu: М">М</a></li>
+					<li><a href="places9.html" title="Alphabet Menu: Н">Н</a></li>
+					<li><a href="places10.html" title="Alphabet Menu: П">П</a></li>
+					<li><a href="places11.html" title="Alphabet Menu: С">С</a></li>
+					<li><a href="places12.html" title="Alphabet Menu: Т">Т</a></li>
+					<li><a href="places13.html" title="Alphabet Menu: Ф">Ф</a></li>
+					<li><a href="places14.html" title="Alphabet Menu: Х">Х</a></li>
+					<li><a href="places15.html" title="Alphabet Menu: Ц">Ц</a></li>
+					<li><a href="places16.html" title="Alphabet Menu: Ч">Ч</a></li>
+					<li><a href="places17.html" title="Alphabet Menu: Ш">Ш</a></li>
 				</ul>
 			</div>
 			<table class="infolist primobjlist placelist ltr">
@@ -114,16 +135,76 @@ function GoToTop() {
 						<th class="ColumnLatitude">Широта</th>
 						<th class="ColumnLongitude">Долгота</th>
 						<tr class = "BeginLetter">
-							<td class="ColumnLetter"><a name="З" title="Места на букву З">З</a></td>
+							<td class="ColumnLetter"><a name="К" title="Места на букву К">К</a></td>
 							<td class="ColumnName">
-								<a href="plc/f/7/f99741e4c444fafc63fce38c97f.html" title="Замбрувский">
-								Замбрувский
+								<a href="plc/5/5/f8d948d0ac064f7afea9da7f155.html" title="Калинин">
+								Калинин
 								</a>
 							</td>
 							<td class="ColumnState">&nbsp;</td>
-							<td class="ColumnCountry">&nbsp;</td>
-							<td class="ColumnLatitude">52°58'14.34"С</td>
-							<td class="ColumnLongitude">22°14'51.80"В</td>
+							<td class="ColumnCountry">Россия</td>
+							<td class="ColumnLatitude">56°51'27.71"С</td>
+							<td class="ColumnLongitude">35°54'55.89"В</td>
+						</tr>
+						<tr>
+							<td class="ColumnLetter">&nbsp;</td>
+							<td class="ColumnName">
+								<a href="plc/b/3/f96a415a3cc76625c61ce7cd03b.html" title="Калининград">
+								Калининград
+								</a>
+							</td>
+							<td class="ColumnState">&nbsp;</td>
+							<td class="ColumnCountry">Россия</td>
+							<td class="ColumnLatitude">54°43'17.57"С</td>
+							<td class="ColumnLongitude">20°30'02.68"В</td>
+						</tr>
+						<tr>
+							<td class="ColumnLetter">&nbsp;</td>
+							<td class="ColumnName">
+								<a href="plc/c/7/f8d93d607d6589c82e9a8e4dd7c.html" title="Кострома,  Костромской р-н">
+								Кострома,  Костромской р-н
+								</a>
+							</td>
+							<td class="ColumnState">&nbsp;</td>
+							<td class="ColumnCountry">Россия</td>
+							<td class="ColumnLatitude">57°45'59.26"С</td>
+							<td class="ColumnLongitude">40°55'30.36"В</td>
+						</tr>
+						<tr>
+							<td class="ColumnLetter">&nbsp;</td>
+							<td class="ColumnName">
+								<a href="plc/4/6/fd45829927a77996eca230d3964.html" title="Кринки,  Бобруйский уезд,  Минская губерния">
+								Кринки,  Бобруйский уезд,  Минская губерния
+								</a>
+							</td>
+							<td class="ColumnState">&nbsp;</td>
+							<td class="ColumnCountry">Белоруссия</td>
+							<td class="ColumnLatitude">53°13'10.56"С</td>
+							<td class="ColumnLongitude">28°23'13.34"В</td>
+						</tr>
+						<tr>
+							<td class="ColumnLetter">&nbsp;</td>
+							<td class="ColumnName">
+								<a href="plc/f/1/f8d95fd99ab424b405d9001e1f.html" title="Кронштадт">
+								Кронштадт
+								</a>
+							</td>
+							<td class="ColumnState">&nbsp;</td>
+							<td class="ColumnCountry">Россия</td>
+							<td class="ColumnLatitude">59°59'31.20"С</td>
+							<td class="ColumnLongitude">29°46'34.18"В</td>
+						</tr>
+						<tr>
+							<td class="ColumnLetter">&nbsp;</td>
+							<td class="ColumnName">
+								<a href="plc/3/8/f9813a74ab51b1ccdff5305b183.html" title="Крым, Россия">
+								Крым, Россия
+								</a>
+							</td>
+							<td class="ColumnState">&nbsp;</td>
+							<td class="ColumnCountry">Россия</td>
+							<td class="ColumnLatitude">&nbsp;</td>
+							<td class="ColumnLongitude">&nbsp;</td>
 						</tr>
 					</tr>
 				</thead>
@@ -132,7 +213,7 @@ function GoToTop() {
 		<div class="fullclear"></div>
 		<div id="footer">
 			<p id="createdate">
-			Создано с помощью <a href="http://gramps-project.org/">Gramps</a> AIO64-6.0.1--1<br />Последнее изменение было сделано 2024-05-08 16:39:55<br />Создано для Вся база данных
+			Создано с помощью <a href="http://gramps-project.org/">Gramps</a> AIO64-6.0.1--1<br />Последнее изменение было сделано 2026-01-27 15:50:15<br />Создано для Вся база данных
 			</p>
 			<p id="copyright">
 			<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License - By attribution" title="Creative Commons License - By attribution" src="images/somerights20.gif" /></a>

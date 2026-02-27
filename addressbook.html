@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html xml:lang="ru" lang="ru" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+<head dir="ltr" lang="ru">
+	<title>Предки и потомки - Адресная книга</title>
+	<meta charset="UTF-8" />
+	<meta name ="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=0.5, maximum-scale=10.0, user-scalable=yes" />
+	<meta name ="apple-mobile-web-app-capable" content="yes" />
+	<meta name="generator" content="Gramps AIO64-6.0.1--1 http://gramps-project.org/" />
+	<meta name="author" content="Владимир Зверев" />
+	<meta name="robots" content="noindex" />
+	<meta name="googlebot" content="noindex" />
+	<link href="images/favicon2.ico" rel="shortcut icon" type="image/x-icon" />
+	<link href="css/ancestortree.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="css/narrative-print.css" media="print" rel="stylesheet" type="text/css" />
+	<link href="css/narrative-screen.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="css/Basic-Ash.css" media="screen" rel="alternate stylesheet" title="Пепел" type="text/css" />
+	<link href="css/Basic-Blue.css" media="screen" rel="alternate stylesheet" title="Голубой" type="text/css" />
+	<link href="css/Basic-Cypress.css" media="screen" rel="alternate stylesheet" title="Кипарис" type="text/css" />
+	<link href="css/Basic-Lilac.css" media="screen" rel="alternate stylesheet" title="Сиреневый" type="text/css" />
+	<link href="css/Basic-Peach.css" media="screen" rel="alternate stylesheet" title="Персиковый" type="text/css" />
+	<link href="css/Basic-Spruce.css" media="screen" rel="alternate stylesheet" title="Ель" type="text/css" />
+	<link href="css/Mainz.css" media="screen" rel="alternate stylesheet" title="Майнц" type="text/css" />
+	<link href="css/Nebraska.css" media="screen" rel="alternate stylesheet" title="Небраска" type="text/css" />
+	<script>function navFunction() { var x = document.getElementById("dropmenu"); if (x.className === "nav") { x.className += " responsive"; } else { x.className = "nav"; } }</script>
+
+<script type="text/javascript">
+function toggleContent(elem, icon) {
+  // Get the DOM reference
+  var contentId = document.getElementById(elem);
+  var icon = document.getElementById(icon);
+  // Toggle
+  if (contentId.style.display == "block") {
+    contentId.style.display = "none";
+    icon.className = 'icon icon-close';
+  } else {
+    contentId.style.display = "block";
+    icon.className = 'icon icon-open';
+  };
+}
+</script>
+
+</head>
+<body dir="ltr">
+	<div id="outerwrapper">
+		<div class="ltr" id="header">
+			<button href="javascript:void(0);" class="navIcon" onclick="navFunction()">&#8801;</button>
+			<h1 class="nav" id="SiteTitle">Предки и потомки</h1>
+		</div>
+		<div class="wrappernav ltr" id="nav" role="navigation">
+			<div class="container">
+				<ul class="nav" id="dropmenu">
+					<li><a href="index.html" title="Домой">Домой</a></li>
+					<li><a href="individuals.html" title="Люди">Люди</a></li>
+					<li><a href="surnames.html" title="Фамилии">Фамилии</a></li>
+					<li><a href="families.html" title="Семьи">Семьи</a></li>
+					<li><a href="events.html" title="События">События</a></li>
+					<li><a href="places.html" title="Места">Места</a></li>
+					<li><a href="heatmaps.html" title="Heatmaps">Heatmaps</a></li>
+					<li><a href="sources.html" title="Источники">Источники</a></li>
+					<li><a href="repositories.html" title="Хранилища">Хранилища</a></li>
+					<li><a href="media.html" title="Альбом">Альбом</a></li>
+					<li class = "CurrentSection"><a href="addressbook.html" title="Адресная книга">Адресная книга</a></li>
+					<li><a href="updates.html" title="Обновления">Обновления</a></li>
+					<li><a href="statistics.html" title="Статистика">Статистика</a></li>
+					<li><a href="cal/2026/index.html" title="Веб-календарь">Веб-календарь</a></li>
+					<li><a onclick="history.go(-1);">Предыдущее</a></li>
+					<li><a onclick="history.go(+1);">Следующее</a></li>
+				</ul>
+			</div>
+		</div>
+		<button id="gototop" onclick="GoToTop()" title="Перейти наверх">
+			<svg class="triangle" viewBox="0 0 100 100">
+				<polygon points="0,100 100,100, 50,10">
+				</polygon>
+			</svg>
+		</button>
+	
+<script>
+//Get the button
+var gototop = document.getElementById("gototop");
+
+// When the user scrolls down 200px from the top of the document,
+// show the button
+window.onscroll = function() {scroll()};
+
+function scroll() {
+  if (document.body.scrollTop > 200 ||
+      document.documentElement.scrollTop > 200) {
+    gototop.style.display = "block";
+  } else {
+    gototop.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function GoToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+		<div class="content" id="AddressBookList">
+			<p id="description">
+			Эта страница содержит индекс всех лиц из базы данных, отсортированный по фамилии, с одним из: Адрес, Место жительства или веб-ссылки. Выбор имени приведёт к странице соответствующего лица в Адресной книге.
+			</p>
+			<table class="infolist primobjlist addressbook ltr">
+				<thead>
+					<tr>
+						<th class="ColumnRowLabel">&nbsp;</th>
+						<th class="ColumnName">Полное имя</th>
+						<th class="ColumnAddress">Адрес</th>
+						<th class="ColumnResidence">Проживание</th>
+						<th class="ColumnWebLinks">Ссылки</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="ColumnRowLabel">1</td>
+						<td class="ColumnName"><a href="addr/1/7/f8dc95b0e06758d972207df5071.html" title="Архипов, Иосиф Александрович">Архипов, Иосиф Александрович</a></td>
+						<td class="ColumnAddress">&nbsp;</td>
+						<td class="ColumnResidence">&nbsp;</td>
+						<td class="ColumnWebLinks">X</td>
+					</tr>
+					<tr>
+						<td class="ColumnRowLabel">2</td>
+						<td class="ColumnName"><a href="addr/7/0/f8d957b92e6ac6c9639df11307.html" title="Зверев, Александр Алексеевич">Зверев, Александр Алексеевич</a></td>
+						<td class="ColumnAddress">&nbsp;</td>
+						<td class="ColumnResidence">X</td>
+						<td class="ColumnWebLinks">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="ColumnRowLabel">3</td>
+						<td class="ColumnName"><a href="addr/e/6/f8d90b9e4ae710a2ecf8a03786e.html" title="Зверев, Игорь Анатольевич">Зверев, Игорь Анатольевич</a></td>
+						<td class="ColumnAddress">&nbsp;</td>
+						<td class="ColumnResidence">X</td>
+						<td class="ColumnWebLinks">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="ColumnRowLabel">4</td>
+						<td class="ColumnName"><a href="addr/2/b/f8ea2baec6f29648bce36ecf5b2.html" title="Ро, Владимир Артурович">Ро, Владимир Артурович</a></td>
+						<td class="ColumnAddress">X</td>
+						<td class="ColumnResidence">&nbsp;</td>
+						<td class="ColumnWebLinks">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="ColumnRowLabel">5</td>
+						<td class="ColumnName"><a href="addr/3/5/f8dc49ff3f457de102df018a253.html" title="Архипова, Зоя Васильевна">Архипова, Зоя Васильевна</a></td>
+						<td class="ColumnAddress">X</td>
+						<td class="ColumnResidence">&nbsp;</td>
+						<td class="ColumnWebLinks">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="ColumnRowLabel">6</td>
+						<td class="ColumnName"><a href="addr/e/f/f8dc94bf3d36bc9b9f9ad2f93fe.html" title="Архипова, Тамара Васильевна">Архипова, Тамара Васильевна</a></td>
+						<td class="ColumnAddress">&nbsp;</td>
+						<td class="ColumnResidence">&nbsp;</td>
+						<td class="ColumnWebLinks">X</td>
+					</tr>
+					<tr>
+						<td class="ColumnRowLabel">7</td>
+						<td class="ColumnName"><a href="addr/8/d/f8d958058383c0d7022495c27d8.html" title="Зверева, Пелагия Васильевна">Зверева, Пелагия Васильевна</a></td>
+						<td class="ColumnAddress">&nbsp;</td>
+						<td class="ColumnResidence">X</td>
+						<td class="ColumnWebLinks">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="ColumnRowLabel">8</td>
+						<td class="ColumnName"><a href="addr/b/7/f8d9496cd737d88b3a3463b3c7b.html" title="Чернова, Тамара Владимировна">Чернова, Тамара Владимировна</a></td>
+						<td class="ColumnAddress">&nbsp;</td>
+						<td class="ColumnResidence">X</td>
+						<td class="ColumnWebLinks">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="ColumnRowLabel">9</td>
+						<td class="ColumnName"><a href="addr/1/d/f8dc901aa6d5086ddd5f95c3bd1.html" title="Архипова Минкевич, Мария Ивановна">Архипова Минкевич, Мария Ивановна</a></td>
+						<td class="ColumnAddress">X</td>
+						<td class="ColumnResidence">&nbsp;</td>
+						<td class="ColumnWebLinks">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="ColumnRowLabel">10</td>
+						<td class="ColumnName"><a href="addr/5/e/f8ea27fe267b6a2b344d4b7e5.html" title="Радзиминская-Францкевич Минкевич, Лидия Ивановна">Радзиминская-Францкевич Минкевич, Лидия Ивановна</a></td>
+						<td class="ColumnAddress">X</td>
+						<td class="ColumnResidence">&nbsp;</td>
+						<td class="ColumnWebLinks">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="ColumnRowLabel">11</td>
+						<td class="ColumnName"><a href="addr/5/2/f8ea28a51b342fef93657957a25.html" title="Минкевич, Ефросинья Ивановна">Минкевич, Ефросинья Ивановна</a></td>
+						<td class="ColumnAddress">X</td>
+						<td class="ColumnResidence">&nbsp;</td>
+						<td class="ColumnWebLinks">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="ColumnRowLabel">12</td>
+						<td class="ColumnName"><a href="addr/5/5/f8d959161277c77a2806a51d655.html" title="Сальников, Савелий Маркович">Сальников, Савелий Маркович</a></td>
+						<td class="ColumnAddress">&nbsp;</td>
+						<td class="ColumnResidence">&nbsp;</td>
+						<td class="ColumnWebLinks">X</td>
+					</tr>
+					<tr>
+						<td class="ColumnRowLabel">13</td>
+						<td class="ColumnName"><a href="addr/7/a/f8dc91096ac555c7971eee5b9a7.html" title="Минкевич, Иван Онуфриевич">Минкевич, Иван Онуфриевич</a></td>
+						<td class="ColumnAddress">X</td>
+						<td class="ColumnResidence">&nbsp;</td>
+						<td class="ColumnWebLinks">X</td>
+					</tr>
+					<tr>
+						<td class="ColumnRowLabel">14</td>
+						<td class="ColumnName"><a href="addr/3/f/f8fc1145fd6276ff753c2d357f3.html" title="Минкевич, Петр Онуфриевич">Минкевич, Петр Онуфриевич</a></td>
+						<td class="ColumnAddress">&nbsp;</td>
+						<td class="ColumnResidence">&nbsp;</td>
+						<td class="ColumnWebLinks">X</td>
+					</tr>
+					<tr>
+						<td class="ColumnRowLabel">15</td>
+						<td class="ColumnName"><a href="addr/8/c/f8d959944652c8396e6d37509c8.html" title="Макеев, Алексей Прохорович">Макеев, Алексей Прохорович</a></td>
+						<td class="ColumnAddress">&nbsp;</td>
+						<td class="ColumnResidence">&nbsp;</td>
+						<td class="ColumnWebLinks">X</td>
+					</tr>
+					<tr>
+						<td class="ColumnRowLabel">16</td>
+						<td class="ColumnName"><a href="addr/0/3/f8d956b09525d6c42d24580a930.html" title="Сальников, Василий Савельевич">Сальников, Василий Савельевич</a></td>
+						<td class="ColumnAddress">&nbsp;</td>
+						<td class="ColumnResidence">&nbsp;</td>
+						<td class="ColumnWebLinks">X</td>
+					</tr>
+					<tr>
+						<td class="ColumnRowLabel">17</td>
+						<td class="ColumnName"><a href="addr/6/6/f933025f4d848bbbf07b2df1266.html" title="Брик, Дора Тимофеевна">Брик, Дора Тимофеевна</a></td>
+						<td class="ColumnAddress">X</td>
+						<td class="ColumnResidence">&nbsp;</td>
+						<td class="ColumnWebLinks">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="ColumnRowLabel">18</td>
+						<td class="ColumnName"><a href="addr/f/c/f8dc917c8d87c020417e64f93cf.html" title="Минкевич Эндрюс Каролина, Екатерина Фоминична">Минкевич Эндрюс Каролина, Екатерина Фоминична</a></td>
+						<td class="ColumnAddress">X</td>
+						<td class="ColumnResidence">&nbsp;</td>
+						<td class="ColumnWebLinks">&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="fullclear"></div>
+		<div id="footer">
+			<p id="createdate">
+			Создано с помощью <a href="http://gramps-project.org/">Gramps</a> AIO64-6.0.1--1 в 26 фев 2026<br />Создано для Вся база данных
+			</p>
+			<p id="copyright">
+			<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License - By attribution" title="Creative Commons License - By attribution" src="images/somerights20.gif" /></a>
+			</p>
+		</div>
+	</div>
+</body>
+</html>

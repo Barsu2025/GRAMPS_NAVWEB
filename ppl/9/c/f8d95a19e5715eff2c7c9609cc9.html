@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html xml:lang="ru" lang="ru" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
 <head dir="ltr" lang="ru">
-	<title>Моё семейное древо - Макеева Спицына, Прасковья Максимовна</title>
+	<title>Предки и потомки - Макеева Спицына, Прасковья Максимовна</title>
 	<meta charset="UTF-8" />
 	<meta name ="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=0.5, maximum-scale=10.0, user-scalable=yes" />
 	<meta name ="apple-mobile-web-app-capable" content="yes" />
 	<meta name="generator" content="Gramps AIO64-6.0.1--1 http://gramps-project.org/" />
-	<meta name="author" content="" />
+	<meta name="author" content="Владимир Зверев" />
 	<meta name="robots" content="noindex" />
 	<meta name="googlebot" content="noindex" />
 	<link href="../../../images/favicon2.ico" rel="shortcut icon" type="image/x-icon" />
@@ -22,6 +22,23 @@
 	<link href="../../../css/Mainz.css" media="screen" rel="alternate stylesheet" title="Майнц" type="text/css" />
 	<link href="../../../css/Nebraska.css" media="screen" rel="alternate stylesheet" title="Небраска" type="text/css" />
 	<script>function navFunction() { var x = document.getElementById("dropmenu"); if (x.className === "nav") { x.className += " responsive"; } else { x.className = "nav"; } }</script>
+
+<script type="text/javascript">
+function toggleContent(elem, icon) {
+  // Get the DOM reference
+  var contentId = document.getElementById(elem);
+  var icon = document.getElementById(icon);
+  // Toggle
+  if (contentId.style.display == "block") {
+    contentId.style.display = "none";
+    icon.className = 'icon icon-close';
+  } else {
+    contentId.style.display = "block";
+    icon.className = 'icon icon-open';
+  };
+}
+</script>
+
 	<link href="../../../css/lightbox.css" media="screen" rel="stylesheet" type="text/css" />
 	<script src="../../../css/lightbox.js" type="text/javascript"></script>
 </head>
@@ -29,13 +46,14 @@
 	<div id="outerwrapper">
 		<div class="ltr" id="header">
 			<button href="javascript:void(0);" class="navIcon" onclick="navFunction()">&#8801;</button>
-			<h1 class="nav" id="SiteTitle">Моё семейное древо</h1>
+			<h1 class="nav" id="SiteTitle">Предки и потомки</h1>
 		</div>
 		<div class="wrappernav ltr" id="nav" role="navigation">
 			<div class="container">
 				<ul class="nav" id="dropmenu">
+					<li><a href="../../../index.html" title="Домой">Домой</a></li>
 					<li class = "CurrentSection"><a href="../../../individuals.html" title="Люди">Люди</a></li>
-					<li><a href="../../../index.html" title="Фамилии">Фамилии</a></li>
+					<li><a href="../../../surnames.html" title="Фамилии">Фамилии</a></li>
 					<li><a href="../../../families.html" title="Семьи">Семьи</a></li>
 					<li><a href="../../../events.html" title="События">События</a></li>
 					<li><a href="../../../places.html" title="Места">Места</a></li>
@@ -43,8 +61,12 @@
 					<li><a href="../../../sources.html" title="Источники">Источники</a></li>
 					<li><a href="../../../repositories.html" title="Хранилища">Хранилища</a></li>
 					<li><a href="../../../media.html" title="Альбом">Альбом</a></li>
+					<li><a href="../../../addressbook.html" title="Адресная книга">Адресная книга</a></li>
 					<li><a href="../../../updates.html" title="Обновления">Обновления</a></li>
+					<li><a href="../../../statistics.html" title="Статистика">Статистика</a></li>
 					<li><a href="../../../cal/2026/index.html" title="Веб-календарь">Веб-календарь</a></li>
+					<li><a onclick="history.go(-1);">Предыдущее</a></li>
+					<li><a onclick="history.go(+1);">Следующее</a></li>
 				</ul>
 			</div>
 		</div>
@@ -100,11 +122,23 @@ function GoToTop() {
 						<td class="ColumnAttribute">Пол</td>
 						<td class="ColumnValue">женский</td>
 					</tr>
+					<tr>
+						<td class="ColumnAttribute">Дата рождения</td>
+						<td class="ColumnValue"></td>
+					</tr>
 				</table>
 			</div>
 			<div class="subsection" id="events">
-				<h4>События</h4>
-				<table class="infolist eventlist toggle_event ltr" id="toggle_event" style="display:block">
+				<h4 onclick="toggleContent('toggle_event', 'icon_event');">
+					<button class="icon" id="icon_event">
+						<svg class="triangle" viewBox="0 0 100 100">
+							<polygon points="5.9,88.2 50,11.8 94.1,88.2">
+							</polygon>
+						</svg>
+					</button>
+				События
+				</h4>
+				<table class="infolist eventlist toggle_event ltr" id="toggle_event" style="display:none">
 					<thead>
 						<tr>
 							<th class="ColumnEvent">Событие</th>
@@ -146,8 +180,16 @@ function GoToTop() {
 				</table>
 			</div>
 			<div class="subsection" id="parents">
-				<h4>Родители</h4>
-				<table class="infolist toggle_parent ltr" id="toggle_parent" style="display:block">
+				<h4 onclick="toggleContent('toggle_parent', 'icon_parent');">
+					<button class="icon" id="icon_parent">
+						<svg class="triangle" viewBox="0 0 100 100">
+							<polygon points="5.9,88.2 50,11.8 94.1,88.2">
+							</polygon>
+						</svg>
+					</button>
+				Родители
+				</h4>
+				<table class="infolist toggle_parent ltr" id="toggle_parent" style="display:none">
 					<thead>
 						<tr>
 							<th class="ColumnAttribute">Родство с базовым лицом</th>
@@ -173,8 +215,16 @@ function GoToTop() {
 				</table>
 			</div>
 			<div class="subsection" id="families">
-				<h4>Семьи</h4>
-				<table class="infolist fixed_subtables" id="toggle_families" style="display:block">
+				<h4 onclick="toggleContent('toggle_families', 'icon_families');">
+					<button class="icon" id="icon_families">
+						<svg class="triangle" viewBox="0 0 100 100">
+							<polygon points="5.9,88.2 50,11.8 94.1,88.2">
+							</polygon>
+						</svg>
+					</button>
+				Семьи
+				</h4>
+				<table class="infolist fixed_subtables" id="toggle_families" style="display:none">
 					<tr class="BeginFamily">
 						<td class="ColumnValue" colspan="3"><H4 class="subsection"><a href="../../../fam/4/b/f8d9598c10888eddb5e6d41cb4.html" title="Семья Спицын, Степан и Макеева Спицына, Прасковья Максимовна">Семья Спицын, Степан и Макеева Спицына, Прасковья Максимовна</a></H4></td>
 					</tr>
@@ -261,8 +311,16 @@ function GoToTop() {
 				</table>
 			</div>
 			<div class="subsection" id="indivgallery">
-				<h4>Альбом</h4>
-				<div id="toggle_media" style="display:block">
+				<h4 onclick="toggleContent('toggle_media', 'icon_media');">
+					<button class="icon" id="icon_media">
+						<svg class="triangle" viewBox="0 0 100 100">
+							<polygon points="5.9,88.2 50,11.8 94.1,88.2">
+							</polygon>
+						</svg>
+					</button>
+				Альбом
+				</h4>
+				<div id="toggle_media" style="display:none">
 					<div class="MediaRow">
 						<div class="MediaColumn ltr">
 							<img class="hover-shadow" onclick="openModal();currentSlide(1)" src="../../../thumb/2/9/f8f339206503131ac35da3fdc92.png" />
@@ -293,14 +351,30 @@ function GoToTop() {
 				<div class="fullclear"></div>
 			</div>
 			<div class="subsection" id="familymap">
-				<h4>Карта семьи</h4>
-				<div id="toggle_map" style="display:block">
+				<h4 onclick="toggleContent('toggle_map', 'icon_map');">
+					<button class="icon" id="icon_map">
+						<svg class="triangle" viewBox="0 0 100 100">
+							<polygon points="5.9,88.2 50,11.8 94.1,88.2">
+							</polygon>
+						</svg>
+					</button>
+				Карта семьи
+				</h4>
+				<div id="toggle_map" style="display:none">
 					<a class="familymap" href="../../../maps/9/c/f8d95a19e5715eff2c7c9609cc9.html" title="Карта семьи">Карта семьи</a>
 				</div>
 			</div>
 			<div class="subsection" id="pedigree">
-				<h4>Родословная</h4>
-				<ol class="pedigreegen" id="toggle_pedigree" style="display:block">
+				<h4 onclick="toggleContent('toggle_pedigree', 'icon_pedigree');">
+					<button class="icon" id="icon_pedigree">
+						<svg class="triangle" viewBox="0 0 100 100">
+							<polygon points="5.9,88.2 50,11.8 94.1,88.2">
+							</polygon>
+						</svg>
+					</button>
+				Родословная
+				</h4>
+				<ol class="pedigreegen" id="toggle_pedigree" style="display:none">
 					<li>
 						<a href="../../../ppl/5/8/f8d95bcc3287b97fc395f2a285.html">, Максим</a>
 						<ol>
@@ -325,8 +399,16 @@ function GoToTop() {
 				</ol>
 			</div>
 			<div class="subsection" id="tree">
-				<h4>Предки</h4>
-				<div class="tree" id="toggle_anc" style="display:block">
+				<h4 onclick="toggleContent('toggle_anc', 'icon_anc');">
+					<button class="icon" id="icon_anc">
+						<svg class="triangle" viewBox="0 0 100 100">
+							<polygon points="5.9,88.2 50,11.8 94.1,88.2">
+							</polygon>
+						</svg>
+					</button>
+				Предки
+				</h4>
+				<div class="tree" id="toggle_anc" style="display:none">
 					<div id="treeContainer" style="width:644px; height:150px; top: 0px">
 						<div class="boxbg female AncCol0" style="top: 5px; left: 6px;">
 							<a class="thumbnail" href="../../../ppl/9/c/f8d95a19e5715eff2c7c9609cc9.html">

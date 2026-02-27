@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html xml:lang="ru" lang="ru" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
 <head dir="ltr" lang="ru">
-	<title>Моё семейное древо - Фамилия - Саницкие</title>
+	<title>Предки и потомки - Фамилия - Саницкие</title>
 	<meta charset="UTF-8" />
 	<meta name ="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=0.5, maximum-scale=10.0, user-scalable=yes" />
 	<meta name ="apple-mobile-web-app-capable" content="yes" />
 	<meta name="generator" content="Gramps AIO64-6.0.1--1 http://gramps-project.org/" />
-	<meta name="author" content="" />
+	<meta name="author" content="Владимир Зверев" />
 	<meta name="robots" content="noindex" />
 	<meta name="googlebot" content="noindex" />
 	<link href="../../../images/favicon2.ico" rel="shortcut icon" type="image/x-icon" />
@@ -22,18 +22,36 @@
 	<link href="../../../css/Mainz.css" media="screen" rel="alternate stylesheet" title="Майнц" type="text/css" />
 	<link href="../../../css/Nebraska.css" media="screen" rel="alternate stylesheet" title="Небраска" type="text/css" />
 	<script>function navFunction() { var x = document.getElementById("dropmenu"); if (x.className === "nav") { x.className += " responsive"; } else { x.className = "nav"; } }</script>
+
+<script type="text/javascript">
+function toggleContent(elem, icon) {
+  // Get the DOM reference
+  var contentId = document.getElementById(elem);
+  var icon = document.getElementById(icon);
+  // Toggle
+  if (contentId.style.display == "block") {
+    contentId.style.display = "none";
+    icon.className = 'icon icon-close';
+  } else {
+    contentId.style.display = "block";
+    icon.className = 'icon icon-open';
+  };
+}
+</script>
+
 </head>
 <body dir="ltr">
 	<div id="outerwrapper">
 		<div class="ltr" id="header">
 			<button href="javascript:void(0);" class="navIcon" onclick="navFunction()">&#8801;</button>
-			<h1 class="nav" id="SiteTitle">Моё семейное древо</h1>
+			<h1 class="nav" id="SiteTitle">Предки и потомки</h1>
 		</div>
 		<div class="wrappernav ltr" id="nav" role="navigation">
 			<div class="container">
 				<ul class="nav" id="dropmenu">
+					<li><a href="../../../index.html" title="Домой">Домой</a></li>
 					<li><a href="../../../individuals.html" title="Люди">Люди</a></li>
-					<li class = "CurrentSection"><a href="../../../index.html" title="Фамилии">Фамилии</a></li>
+					<li class = "CurrentSection"><a href="../../../surnames.html" title="Фамилии">Фамилии</a></li>
 					<li><a href="../../../families.html" title="Семьи">Семьи</a></li>
 					<li><a href="../../../events.html" title="События">События</a></li>
 					<li><a href="../../../places.html" title="Места">Места</a></li>
@@ -41,8 +59,12 @@
 					<li><a href="../../../sources.html" title="Источники">Источники</a></li>
 					<li><a href="../../../repositories.html" title="Хранилища">Хранилища</a></li>
 					<li><a href="../../../media.html" title="Альбом">Альбом</a></li>
+					<li><a href="../../../addressbook.html" title="Адресная книга">Адресная книга</a></li>
 					<li><a href="../../../updates.html" title="Обновления">Обновления</a></li>
+					<li><a href="../../../statistics.html" title="Статистика">Статистика</a></li>
 					<li><a href="../../../cal/2026/index.html" title="Веб-календарь">Веб-календарь</a></li>
+					<li><a onclick="history.go(-1);">Предыдущее</a></li>
+					<li><a onclick="history.go(+1);">Следующее</a></li>
 				</ul>
 			</div>
 		</div>
@@ -95,9 +117,9 @@ function GoToTop() {
 				<tbody>
 					<tr>
 						<td class="ColumnName">
-							<a href="../../../ppl/b/3/f98fefd9b1043c619651e974b3b.html">Саницка Зверева Татарёнок, Мария Александровна</a>
+							<a href="../../../ppl/b/3/f98fefd9b1043c619651e974b3b.html">Саницка Зверева Татарёнок, Мария [Живой]</a>
 						</td>
-						<td class="ColumnBirth">23 апр 1984</td>
+						<td class="ColumnBirth">&nbsp;</td>
 						<td class="ColumnDeath">&nbsp;</td>
 						<td class="ColumnPartner">
 							<a href="../../../ppl/7/1/f996556a6c35b0aa1c0d3260917.html">Саницки, Роберт,</a>
@@ -114,7 +136,7 @@ function GoToTop() {
 					</tr>
 					<tr>
 						<td class="ColumnName">
-							<a href="../../../ppl/2/e/f98ff22ba7a253552e3fd7918e2.html">Саницка, Мира Робертовна</a>
+							<a href="../../../ppl/2/e/f98ff22ba7a253552e3fd7918e2.html">Саницка, Мира [Живой]</a>
 						</td>
 						<td class="ColumnBirth">&nbsp;</td>
 						<td class="ColumnDeath">&nbsp;</td>
@@ -125,7 +147,7 @@ function GoToTop() {
 							<span class="father fatherNmother">
 							Саницки, Роберт
 								<span class="mother">
-								Саницка Зверева Татарёнок, Мария Александровна
+								Саницка Зверева Татарёнок, Мария [Живой]
 								</span>
 							</span>
 						</td>
@@ -137,13 +159,13 @@ function GoToTop() {
 						<td class="ColumnBirth">&nbsp;</td>
 						<td class="ColumnDeath">&nbsp;</td>
 						<td class="ColumnPartner">
-							<a href="../../../ppl/b/3/f98fefd9b1043c619651e974b3b.html">Саницка Зверева Татарёнок, Мария Александровна</a>
+							<a href="../../../ppl/b/3/f98fefd9b1043c619651e974b3b.html">Саницка Зверева Татарёнок, Мария [Живой]</a>
 						</td>
 						<td class="ColumnParents">&nbsp;</td>
 					</tr>
 					<tr>
 						<td class="ColumnName">
-							<a href="../../../ppl/0/f/f98ff294ba6733ff84f4bcd84f0.html">Саницка, Эмилия Робертовна</a>
+							<a href="../../../ppl/0/f/f98ff294ba6733ff84f4bcd84f0.html">Саницка, Эмилия [Живой]</a>
 						</td>
 						<td class="ColumnBirth">&nbsp;</td>
 						<td class="ColumnDeath">&nbsp;</td>
@@ -154,7 +176,7 @@ function GoToTop() {
 							<span class="father fatherNmother">
 							Саницки, Роберт
 								<span class="mother">
-								Саницка Зверева Татарёнок, Мария Александровна
+								Саницка Зверева Татарёнок, Мария [Живой]
 								</span>
 							</span>
 						</td>

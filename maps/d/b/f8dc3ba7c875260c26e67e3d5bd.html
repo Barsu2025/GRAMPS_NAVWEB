@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html xml:lang="ru" lang="ru" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
 <head dir="ltr" lang="ru">
-	<title>Моё семейное древо - Карта семьи</title>
+	<title>Предки и потомки - Карта семьи</title>
 	<meta charset="UTF-8" />
 	<meta name ="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=0.5, maximum-scale=10.0, user-scalable=yes" />
 	<meta name ="apple-mobile-web-app-capable" content="yes" />
 	<meta name="generator" content="Gramps AIO64-6.0.1--1 http://gramps-project.org/" />
-	<meta name="author" content="" />
+	<meta name="author" content="Владимир Зверев" />
 	<meta name="robots" content="noindex" />
 	<meta name="googlebot" content="noindex" />
 	<link href="../../../images/favicon2.ico" rel="shortcut icon" type="image/x-icon" />
@@ -22,6 +22,23 @@
 	<link href="../../../css/Mainz.css" media="screen" rel="alternate stylesheet" title="Майнц" type="text/css" />
 	<link href="../../../css/Nebraska.css" media="screen" rel="alternate stylesheet" title="Небраска" type="text/css" />
 	<script>function navFunction() { var x = document.getElementById("dropmenu"); if (x.className === "nav") { x.className += " responsive"; } else { x.className = "nav"; } }</script>
+
+<script type="text/javascript">
+function toggleContent(elem, icon) {
+  // Get the DOM reference
+  var contentId = document.getElementById(elem);
+  var icon = document.getElementById(icon);
+  // Toggle
+  if (contentId.style.display == "block") {
+    contentId.style.display = "none";
+    icon.className = 'icon icon-close';
+  } else {
+    contentId.style.display = "block";
+    icon.className = 'icon icon-open';
+  };
+}
+</script>
+
 	<link href="../../../css/narrative-maps.css" media="screen" rel="stylesheet" type="text/css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
 	<script src="https://openlayers.org/en/v6.15.1/build/ol.js" type="text/javascript"></script>
@@ -31,13 +48,14 @@
 	<div id="outerwrapper">
 		<div class="ltr" id="header">
 			<button href="javascript:void(0);" class="navIcon" onclick="navFunction()">&#8801;</button>
-			<h1 class="nav" id="SiteTitle">Моё семейное древо</h1>
+			<h1 class="nav" id="SiteTitle">Предки и потомки</h1>
 		</div>
 		<div class="wrappernav ltr" id="nav" role="navigation">
 			<div class="container">
 				<ul class="nav" id="dropmenu">
+					<li><a href="../../../index.html" title="Домой">Домой</a></li>
 					<li><a href="../../../individuals.html" title="Люди">Люди</a></li>
-					<li><a href="../../../index.html" title="Фамилии">Фамилии</a></li>
+					<li><a href="../../../surnames.html" title="Фамилии">Фамилии</a></li>
 					<li><a href="../../../families.html" title="Семьи">Семьи</a></li>
 					<li><a href="../../../events.html" title="События">События</a></li>
 					<li><a href="../../../places.html" title="Места">Места</a></li>
@@ -45,8 +63,12 @@
 					<li><a href="../../../sources.html" title="Источники">Источники</a></li>
 					<li><a href="../../../repositories.html" title="Хранилища">Хранилища</a></li>
 					<li><a href="../../../media.html" title="Альбом">Альбом</a></li>
+					<li><a href="../../../addressbook.html" title="Адресная книга">Адресная книга</a></li>
 					<li><a href="../../../updates.html" title="Обновления">Обновления</a></li>
+					<li><a href="../../../statistics.html" title="Статистика">Статистика</a></li>
 					<li><a href="../../../cal/2026/index.html" title="Веб-календарь">Веб-календарь</a></li>
+					<li><a onclick="history.go(-1);">Предыдущее</a></li>
+					<li><a onclick="history.go(+1);">Следующее</a></li>
 				</ul>
 			</div>
 		</div>
@@ -102,11 +124,6 @@ function GoToTop() {
 					</thead>
 					<tbody>
 						<tr>
-							<td class="ColumnDate">26 авг 1935</td>
-							<td class="ColumnPlace"><a href="../../../plc/e/5/f8dc35bf8e635599510c7052d5e.html" title="Санкт-Петербург, Россия">Санкт-Петербург, Россия</a></td>
-							<td class="ColumnType">Рождение</td>
-						</tr>
-						<tr>
 							<td class="ColumnDate">3 дек 1940</td>
 							<td class="ColumnPlace"><a href="../../../plc/e/5/f8dc35bf8e635599510c7052d5e.html" title="Санкт-Петербург, Россия">Санкт-Петербург, Россия</a></td>
 							<td class="ColumnType">Рождение</td>
@@ -120,11 +137,6 @@ function GoToTop() {
 							<td class="ColumnDate">1948</td>
 							<td class="ColumnPlace"><a href="../../../plc/9/e/f939a4a20142293c5b7f15829e9.html" title="Школа N 163 Центрального района, Санкт-Петербург, Россия">Школа N 163 Центрального района, Санкт-Петербург, Россия</a></td>
 							<td class="ColumnType">Поступлениев школу</td>
-						</tr>
-						<tr>
-							<td class="ColumnDate">2 мар 1973</td>
-							<td class="ColumnPlace"><a href="../../../plc/e/5/f8dc35bf8e635599510c7052d5e.html" title="Санкт-Петербург, Россия">Санкт-Петербург, Россия</a></td>
-							<td class="ColumnType">Рождение</td>
 						</tr>
 						<tr>
 							<td class="ColumnDate">15 авг 1998</td>
@@ -144,7 +156,7 @@ function GoToTop() {
     var heat = 'markers';
     var tracelife = [
     [30.099430, 60.134537, 'Белоостровское кладбище, Ленинградская область, Россия', "<p><a href='../../../ppl/d/b/f8dc3ba7c875260c26e67e3d5bd.html' title='I0028' target='_self'>Архипова Брик, Сусанна Ильинична</a>:<a href='../../../evt/a/2/f923308795f786cba491e4f632a.html' title='15 авг 1998' target='_self'>Захоронение</a> (15 авг 1998)"],
-    [30.316667, 59.950000, 'Санкт-Петербург, Россия', "<p><a href='../../../ppl/3/5/f8dc49ff3f457de102df018a253.html' title='I0030' target='_self'>Архипова, Зоя Васильевна</a>:<a href='../../../evt/1/3/f8dc3c2d8fc1a9b5745dfaa5831.html' title='3 дек 1940' target='_self'>Рождение</a> (3 дек 1940)" + "<br><a href='../../../ppl/d/b/f8dc3ba7c875260c26e67e3d5bd.html' title='I0028' target='_self'>Архипова Брик, Сусанна Ильинична</a>:<a href='../../../evt/1/3/f8dc3c2d8fc1a9b5745dfaa5831.html' title='3 дек 1940' target='_self'>Рождение</a> (3 дек 1940)" + "<br><a href='../../../fam/c/e/f8dc3ddbb5d1fb03904615a9dec.html' title='F0016' target='_self'>Семья Брик, Илья Тимофеевич и Архипова, Зоя Васильевна</a>" + "<br><a href='../../../ppl/b/9/f8dc3de34f130ca30992d7e809b.html' title='I0029' target='_self'>Брик, Илья Тимофеевич</a>:<a href='../../../evt/1/3/f8dc3c2d8fc1a9b5745dfaa5831.html' title='3 дек 1940' target='_self'>Рождение</a> (3 дек 1940)" + "<br><a href='../../../ppl/0/a/f8dc3b43b4b6d2f469dd57954a0.html' title='I0027' target='_self'>Завадский, Александр Алексеевич</a>:<a href='../../../evt/6/d/f983c3441244eb45c879cd259d6.html' title='26 авг 1935' target='_self'>Рождение</a> (26 авг 1935)" + "<br><a href='../../../ppl/5/3/f8dc372aaa861b2d0e8a0c40f35.html' title='I0025' target='_self'>Зверева Васильева Архипова Брик, Мария Ильинична</a>:<a href='../../../evt/6/1/f8dc37e73216369af95d7782c16.html' title='2 мар 1973' target='_self'>Рождение</a> (2 мар 1973)"],
+    [30.316667, 59.950000, 'Санкт-Петербург, Россия', "<p><a href='../../../ppl/d/b/f8dc3ba7c875260c26e67e3d5bd.html' title='I0028' target='_self'>Архипова Брик, Сусанна Ильинична</a>:<a href='../../../evt/1/3/f8dc3c2d8fc1a9b5745dfaa5831.html' title='3 дек 1940' target='_self'>Рождение</a> (3 дек 1940)" + "<br><a href='../../../fam/c/e/f8dc3ddbb5d1fb03904615a9dec.html' title='F0016' target='_self'>Семья Брик, Илья Тимофеевич и Архипова, Зоя Васильевна</a>" + "<br><a href='../../../ppl/3/5/f8dc49ff3f457de102df018a253.html' title='I0030' target='_self'>Архипова, Зоя Васильевна</a>:<a href='../../../evt/1/3/f8dc3c2d8fc1a9b5745dfaa5831.html' title='3 дек 1940' target='_self'>Рождение</a> (3 дек 1940)" + "<br><a href='../../../ppl/b/9/f8dc3de34f130ca30992d7e809b.html' title='I0029' target='_self'>Брик, Илья Тимофеевич</a>:<a href='../../../evt/1/3/f8dc3c2d8fc1a9b5745dfaa5831.html' title='3 дек 1940' target='_self'>Рождение</a> (3 дек 1940)"],
     [83.381000, 54.222200, 'Черепаново, Новосибирская область, Россия', "<p><a href='../../../ppl/d/b/f8dc3ba7c875260c26e67e3d5bd.html' title='I0028' target='_self'>Архипова Брик, Сусанна Ильинична</a>:<a href='../../../evt/5/f/f973796758136d4683e2e4f7ff5.html' title='1942' target='_self'>Эвакуация</a> (1942)"],
     [30.380010, 59.942990, 'Школа N 163 Центрального района, Санкт-Петербург, Россия', "<p><a href='../../../ppl/d/b/f8dc3ba7c875260c26e67e3d5bd.html' title='I0028' target='_self'>Архипова Брик, Сусанна Ильинична</a>:<a href='../../../evt/2/e/f9233119b1f51a12f7da82d1de2.html' title='1948' target='_self'>Поступлениев школу</a> (1948)"],];;
     var iconStyle = new ol.style.Style({
@@ -285,7 +297,7 @@ function GoToTop() {
 		<div class="fullclear"></div>
 		<div id="footer">
 			<p id="createdate">
-			Создано с помощью <a href="http://gramps-project.org/">Gramps</a> AIO64-6.0.1--1 в 25 фев 2026<br />Создано для Вся база данных
+			Создано с помощью <a href="http://gramps-project.org/">Gramps</a> AIO64-6.0.1--1 в 26 фев 2026<br />Создано для Вся база данных
 			</p>
 			<p id="copyright">
 			<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License - By attribution" title="Creative Commons License - By attribution" src="../../../images/somerights20.gif" /></a>

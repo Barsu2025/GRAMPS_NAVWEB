@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html xml:lang="ru" lang="ru" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
 <head dir="ltr" lang="ru">
-	<title>Моё семейное древо - События</title>
+	<title>Предки и потомки - События</title>
 	<meta charset="UTF-8" />
 	<meta name ="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=0.5, maximum-scale=10.0, user-scalable=yes" />
 	<meta name ="apple-mobile-web-app-capable" content="yes" />
 	<meta name="generator" content="Gramps AIO64-6.0.1--1 http://gramps-project.org/" />
-	<meta name="author" content="" />
+	<meta name="author" content="Владимир Зверев" />
 	<meta name="robots" content="noindex" />
 	<meta name="googlebot" content="noindex" />
 	<link href="images/favicon2.ico" rel="shortcut icon" type="image/x-icon" />
@@ -22,18 +22,36 @@
 	<link href="css/Mainz.css" media="screen" rel="alternate stylesheet" title="Майнц" type="text/css" />
 	<link href="css/Nebraska.css" media="screen" rel="alternate stylesheet" title="Небраска" type="text/css" />
 	<script>function navFunction() { var x = document.getElementById("dropmenu"); if (x.className === "nav") { x.className += " responsive"; } else { x.className = "nav"; } }</script>
+
+<script type="text/javascript">
+function toggleContent(elem, icon) {
+  // Get the DOM reference
+  var contentId = document.getElementById(elem);
+  var icon = document.getElementById(icon);
+  // Toggle
+  if (contentId.style.display == "block") {
+    contentId.style.display = "none";
+    icon.className = 'icon icon-close';
+  } else {
+    contentId.style.display = "block";
+    icon.className = 'icon icon-open';
+  };
+}
+</script>
+
 </head>
 <body dir="ltr">
 	<div id="outerwrapper">
 		<div class="ltr" id="header">
 			<button href="javascript:void(0);" class="navIcon" onclick="navFunction()">&#8801;</button>
-			<h1 class="nav" id="SiteTitle">Моё семейное древо</h1>
+			<h1 class="nav" id="SiteTitle">Предки и потомки</h1>
 		</div>
 		<div class="wrappernav ltr" id="nav" role="navigation">
 			<div class="container">
 				<ul class="nav" id="dropmenu">
+					<li><a href="index.html" title="Домой">Домой</a></li>
 					<li><a href="individuals.html" title="Люди">Люди</a></li>
-					<li><a href="index.html" title="Фамилии">Фамилии</a></li>
+					<li><a href="surnames.html" title="Фамилии">Фамилии</a></li>
 					<li><a href="families.html" title="Семьи">Семьи</a></li>
 					<li class = "CurrentSection"><a href="events.html" title="События">События</a></li>
 					<li><a href="places.html" title="Места">Места</a></li>
@@ -41,8 +59,12 @@
 					<li><a href="sources.html" title="Источники">Источники</a></li>
 					<li><a href="repositories.html" title="Хранилища">Хранилища</a></li>
 					<li><a href="media.html" title="Альбом">Альбом</a></li>
+					<li><a href="addressbook.html" title="Адресная книга">Адресная книга</a></li>
 					<li><a href="updates.html" title="Обновления">Обновления</a></li>
+					<li><a href="statistics.html" title="Статистика">Статистика</a></li>
 					<li><a href="cal/2026/index.html" title="Веб-календарь">Веб-календарь</a></li>
+					<li><a onclick="history.go(-1);">Предыдущее</a></li>
+					<li><a onclick="history.go(+1);">Следующее</a></li>
 				</ul>
 			</div>
 		</div>
@@ -113,17 +135,6 @@ function GoToTop() {
 						<td class="ColumnType" title="Деятельность">Деятельность</td>
 						<td class="ColumnDate"></td>
 						<td class="ColumnGRAMPSID">
-							<a href="./evt/7/6/f922b4cacee493e7c380f87e667.html" title="E0105">E0105</a>
-						</td>
-						<td class="ColumnPerson">
-							<span class="person"><a href="ppl/6/7/f9229e78de558a036831dae4076.html">Радзиминская-Францкевич, Валентина Ивановна(Викторовна)</a></span>
-						</td>
-					</tr>
-					<tr>
-						<td class="ColumnLetter"></td>
-						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
-						<td class="ColumnDate"></td>
-						<td class="ColumnGRAMPSID">
 							<a href="./evt/3/d/f922c61b62d6f1283a49d0c07d3.html" title="E0106">E0106</a>
 						</td>
 						<td class="ColumnPerson">
@@ -139,17 +150,6 @@ function GoToTop() {
 						</td>
 						<td class="ColumnPerson">
 							<span class="person"><a href="ppl/5/b/f922a02b8f453617981906932b5.html">, Юрий</a></span>
-						</td>
-					</tr>
-					<tr>
-						<td class="ColumnLetter"></td>
-						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
-						<td class="ColumnDate"></td>
-						<td class="ColumnGRAMPSID">
-							<a href="./evt/d/f/f922cc6120371f97937308773fd.html" title="E0109">E0109</a>
-						</td>
-						<td class="ColumnPerson">
-							<span class="person"><a href="ppl/3/e/f92299010151d32bd36e56257e3.html">Балашов, Юрий Борисович</a></span>
 						</td>
 					</tr>
 					<tr>
@@ -205,28 +205,6 @@ function GoToTop() {
 						</td>
 						<td class="ColumnPerson">
 							<span class="person"><a href="ppl/b/9/f8dc3de34f130ca30992d7e809b.html">Брик, Илья Тимофеевич</a></span>
-						</td>
-					</tr>
-					<tr>
-						<td class="ColumnLetter"></td>
-						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
-						<td class="ColumnDate">с 1941 по 1945</td>
-						<td class="ColumnGRAMPSID">
-							<a href="./evt/c/b/f922cc02cba7ee9dade00a31bc.html" title="E0108">E0108</a>
-						</td>
-						<td class="ColumnPerson">
-							<span class="person"><a href="ppl/3/e/f92299010151d32bd36e56257e3.html">Балашов, Юрий Борисович</a></span>
-						</td>
-					</tr>
-					<tr>
-						<td class="ColumnLetter"></td>
-						<td class="ColumnType" title="&nbsp;">&nbsp;</td>
-						<td class="ColumnDate">1954</td>
-						<td class="ColumnGRAMPSID">
-							<a href="./evt/4/a/f922ce48f6f4176ca4bdd01eea4.html" title="E0110">E0110</a>
-						</td>
-						<td class="ColumnPerson">
-							<span class="person"><a href="ppl/3/e/f92299010151d32bd36e56257e3.html">Балашов, Юрий Борисович</a></span>
 						</td>
 					</tr>
 				</tbody>

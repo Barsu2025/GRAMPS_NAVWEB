@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html xml:lang="ru" lang="ru" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
 <head dir="ltr" lang="ru">
-	<title>Моё семейное древо - Сальникова, Анна Савельевна</title>
+	<title>Предки и потомки - Сальникова, Анна [Живой]</title>
 	<meta charset="UTF-8" />
 	<meta name ="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=0.5, maximum-scale=10.0, user-scalable=yes" />
 	<meta name ="apple-mobile-web-app-capable" content="yes" />
 	<meta name="generator" content="Gramps AIO64-6.0.1--1 http://gramps-project.org/" />
-	<meta name="author" content="" />
+	<meta name="author" content="Владимир Зверев" />
 	<meta name="robots" content="noindex" />
 	<meta name="googlebot" content="noindex" />
 	<link href="../../../images/favicon2.ico" rel="shortcut icon" type="image/x-icon" />
@@ -22,18 +22,36 @@
 	<link href="../../../css/Mainz.css" media="screen" rel="alternate stylesheet" title="Майнц" type="text/css" />
 	<link href="../../../css/Nebraska.css" media="screen" rel="alternate stylesheet" title="Небраска" type="text/css" />
 	<script>function navFunction() { var x = document.getElementById("dropmenu"); if (x.className === "nav") { x.className += " responsive"; } else { x.className = "nav"; } }</script>
+
+<script type="text/javascript">
+function toggleContent(elem, icon) {
+  // Get the DOM reference
+  var contentId = document.getElementById(elem);
+  var icon = document.getElementById(icon);
+  // Toggle
+  if (contentId.style.display == "block") {
+    contentId.style.display = "none";
+    icon.className = 'icon icon-close';
+  } else {
+    contentId.style.display = "block";
+    icon.className = 'icon icon-open';
+  };
+}
+</script>
+
 </head>
 <body dir="ltr">
 	<div id="outerwrapper">
 		<div class="ltr" id="header">
 			<button href="javascript:void(0);" class="navIcon" onclick="navFunction()">&#8801;</button>
-			<h1 class="nav" id="SiteTitle">Моё семейное древо</h1>
+			<h1 class="nav" id="SiteTitle">Предки и потомки</h1>
 		</div>
 		<div class="wrappernav ltr" id="nav" role="navigation">
 			<div class="container">
 				<ul class="nav" id="dropmenu">
+					<li><a href="../../../index.html" title="Домой">Домой</a></li>
 					<li class = "CurrentSection"><a href="../../../individuals.html" title="Люди">Люди</a></li>
-					<li><a href="../../../index.html" title="Фамилии">Фамилии</a></li>
+					<li><a href="../../../surnames.html" title="Фамилии">Фамилии</a></li>
 					<li><a href="../../../families.html" title="Семьи">Семьи</a></li>
 					<li><a href="../../../events.html" title="События">События</a></li>
 					<li><a href="../../../places.html" title="Места">Места</a></li>
@@ -41,8 +59,12 @@
 					<li><a href="../../../sources.html" title="Источники">Источники</a></li>
 					<li><a href="../../../repositories.html" title="Хранилища">Хранилища</a></li>
 					<li><a href="../../../media.html" title="Альбом">Альбом</a></li>
+					<li><a href="../../../addressbook.html" title="Адресная книга">Адресная книга</a></li>
 					<li><a href="../../../updates.html" title="Обновления">Обновления</a></li>
+					<li><a href="../../../statistics.html" title="Статистика">Статистика</a></li>
 					<li><a href="../../../cal/2026/index.html" title="Веб-календарь">Веб-календарь</a></li>
+					<li><a onclick="history.go(-1);">Предыдущее</a></li>
+					<li><a onclick="history.go(+1);">Следующее</a></li>
 				</ul>
 			</div>
 		</div>
@@ -78,13 +100,13 @@ function GoToTop() {
 </script>
 
 		<div class="content" id="IndividualDetail">
-			<h3>Сальникова, Анна Савельевна<sup><small></small></sup></h3>
+			<h3>Сальникова, Анна [Живой]<sup><small></small></sup></h3>
 			<div id="summaryarea">
 				<table class="infolist">
 					<tr>
 						<td class="ColumnAttribute">Имя при рождении</td>
 						<td class="ColumnValue">
-						Сальникова, Анна Савельевна
+						Сальникова, Анна [Живой]
 						</td>
 					</tr>
 					<tr>
@@ -93,20 +115,17 @@ function GoToTop() {
 					</tr>
 				</table>
 			</div>
-			<div class="subsection narrative">
-				<h4>Заметки</h4>
-				<div class="subsection narrative" id="toggle_note" style="display:block">
-					<h4>Исследование</h4>
-					<div class="grampsstylednote">
-						<p>
-						жила в Москве
-						</p>
-					</div>
-				</div>
-			</div>
 			<div class="subsection" id="parents">
-				<h4>Родители</h4>
-				<table class="infolist toggle_parent ltr" id="toggle_parent" style="display:block">
+				<h4 onclick="toggleContent('toggle_parent', 'icon_parent');">
+					<button class="icon" id="icon_parent">
+						<svg class="triangle" viewBox="0 0 100 100">
+							<polygon points="5.9,88.2 50,11.8 94.1,88.2">
+							</polygon>
+						</svg>
+					</button>
+				Родители
+				</h4>
+				<table class="infolist toggle_parent ltr" id="toggle_parent" style="display:none">
 					<thead>
 						<tr>
 							<th class="ColumnAttribute">Родство с базовым лицом</th>
@@ -141,7 +160,7 @@ function GoToTop() {
 						</tr>
 						<tr>
 							<td class="ColumnAttribute">&nbsp;&nbsp;&nbsp;&nbsp;</td>
-							<td class="ColumnValue">&nbsp;&nbsp;&nbsp;&nbsp;<b>Сальникова, Анна Савельевна</b></td>
+							<td class="ColumnValue">&nbsp;&nbsp;&nbsp;&nbsp;<b>Сальникова, Анна [Живой]</b></td>
 							<td class="ColumnDate"></td>
 							<td class="ColumnDate"></td>
 							<td class="ColumnValue"></td>
@@ -150,8 +169,16 @@ function GoToTop() {
 				</table>
 			</div>
 			<div class="subsection" id="pedigree">
-				<h4>Родословная</h4>
-				<ol class="pedigreegen" id="toggle_pedigree" style="display:block">
+				<h4 onclick="toggleContent('toggle_pedigree', 'icon_pedigree');">
+					<button class="icon" id="icon_pedigree">
+						<svg class="triangle" viewBox="0 0 100 100">
+							<polygon points="5.9,88.2 50,11.8 94.1,88.2">
+							</polygon>
+						</svg>
+					</button>
+				Родословная
+				</h4>
+				<ol class="pedigreegen" id="toggle_pedigree" style="display:none">
 					<li>
 						<a href="../../../ppl/5/5/f8d959161277c77a2806a51d655.html">Сальников, Савелий Маркович</a>
 						<ol>
@@ -159,7 +186,7 @@ function GoToTop() {
 								<a href="../../../ppl/4/1/f902c8ebe8c4191bb1aee4e4c14.html">Сальникова</a>
 								<ol>
 									<li class="thisperson">
-									Сальникова, Анна Савельевна
+									Сальникова, Анна [Живой]
 									</li>
 									<li>
 										<a href="../../../ppl/0/3/f8d956b09525d6c42d24580a930.html">Сальников, Василий Савельевич</a>
@@ -174,12 +201,20 @@ function GoToTop() {
 				</ol>
 			</div>
 			<div class="subsection" id="tree">
-				<h4>Предки</h4>
-				<div class="tree" id="toggle_anc" style="display:block">
+				<h4 onclick="toggleContent('toggle_anc', 'icon_anc');">
+					<button class="icon" id="icon_anc">
+						<svg class="triangle" viewBox="0 0 100 100">
+							<polygon points="5.9,88.2 50,11.8 94.1,88.2">
+							</polygon>
+						</svg>
+					</button>
+				Предки
+				</h4>
+				<div class="tree" id="toggle_anc" style="display:none">
 					<div id="treeContainer" style="width:1264px; height:375px; top: 0px">
 						<div class="boxbg female AncCol0" style="top: 155px; left: 6px;">
 							<a class="noThumb" href="../../../ppl/8/b/f9a197ebbec6e068e4e37044bb8.html">
-							Сальникова, Анна Савельевна<br>*<br>+...
+							Сальникова, Анна [Живой]<br>*<br>+...
 							</a>
 						</div>
 						<div class="shadow" style="top: 160px; left: 10px;"></div>

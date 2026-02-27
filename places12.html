@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html xml:lang="ru" lang="ru" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
 <head dir="ltr" lang="ru">
-	<title>Моё семейное древо - Места</title>
+	<title>Предки и потомки - Места</title>
 	<meta charset="UTF-8" />
 	<meta name ="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=0.5, maximum-scale=10.0, user-scalable=yes" />
 	<meta name ="apple-mobile-web-app-capable" content="yes" />
 	<meta name="generator" content="Gramps AIO64-6.0.1--1 http://gramps-project.org/" />
-	<meta name="author" content="" />
+	<meta name="author" content="Владимир Зверев" />
 	<meta name="robots" content="noindex" />
 	<meta name="googlebot" content="noindex" />
 	<link href="images/favicon2.ico" rel="shortcut icon" type="image/x-icon" />
@@ -22,18 +22,36 @@
 	<link href="css/Mainz.css" media="screen" rel="alternate stylesheet" title="Майнц" type="text/css" />
 	<link href="css/Nebraska.css" media="screen" rel="alternate stylesheet" title="Небраска" type="text/css" />
 	<script>function navFunction() { var x = document.getElementById("dropmenu"); if (x.className === "nav") { x.className += " responsive"; } else { x.className = "nav"; } }</script>
+
+<script type="text/javascript">
+function toggleContent(elem, icon) {
+  // Get the DOM reference
+  var contentId = document.getElementById(elem);
+  var icon = document.getElementById(icon);
+  // Toggle
+  if (contentId.style.display == "block") {
+    contentId.style.display = "none";
+    icon.className = 'icon icon-close';
+  } else {
+    contentId.style.display = "block";
+    icon.className = 'icon icon-open';
+  };
+}
+</script>
+
 </head>
 <body dir="ltr">
 	<div id="outerwrapper">
 		<div class="ltr" id="header">
 			<button href="javascript:void(0);" class="navIcon" onclick="navFunction()">&#8801;</button>
-			<h1 class="nav" id="SiteTitle">Моё семейное древо</h1>
+			<h1 class="nav" id="SiteTitle">Предки и потомки</h1>
 		</div>
 		<div class="wrappernav ltr" id="nav" role="navigation">
 			<div class="container">
 				<ul class="nav" id="dropmenu">
+					<li><a href="index.html" title="Домой">Домой</a></li>
 					<li><a href="individuals.html" title="Люди">Люди</a></li>
-					<li><a href="index.html" title="Фамилии">Фамилии</a></li>
+					<li><a href="surnames.html" title="Фамилии">Фамилии</a></li>
 					<li><a href="families.html" title="Семьи">Семьи</a></li>
 					<li><a href="events.html" title="События">События</a></li>
 					<li class = "CurrentSection"><a href="places.html" title="Места">Места</a></li>
@@ -41,8 +59,12 @@
 					<li><a href="sources.html" title="Источники">Источники</a></li>
 					<li><a href="repositories.html" title="Хранилища">Хранилища</a></li>
 					<li><a href="media.html" title="Альбом">Альбом</a></li>
+					<li><a href="addressbook.html" title="Адресная книга">Адресная книга</a></li>
 					<li><a href="updates.html" title="Обновления">Обновления</a></li>
+					<li><a href="statistics.html" title="Статистика">Статистика</a></li>
 					<li><a href="cal/2026/index.html" title="Веб-календарь">Веб-календарь</a></li>
+					<li><a onclick="history.go(-1);">Предыдущее</a></li>
+					<li><a onclick="history.go(+1);">Следующее</a></li>
 				</ul>
 			</div>
 		</div>
@@ -88,20 +110,19 @@ function GoToTop() {
 					<li><a href="places2.html" title="Alphabet Menu: Б">Б</a></li>
 					<li><a href="places3.html" title="Alphabet Menu: В">В</a></li>
 					<li><a href="places4.html" title="Alphabet Menu: Г">Г</a></li>
-					<li><a href="places5.html" title="Alphabet Menu: Д">Д</a></li>
-					<li><a href="places6.html" title="Alphabet Menu: Е">Е</a></li>
-					<li><a href="places7.html" title="Alphabet Menu: З">З</a></li>
-					<li><a href="places8.html" title="Alphabet Menu: К">К</a></li>
-					<li><a href="places9.html" title="Alphabet Menu: М">М</a></li>
-					<li><a href="places10.html" title="Alphabet Menu: Н">Н</a></li>
-					<li><a href="places11.html" title="Alphabet Menu: П">П</a></li>
-					<li class = "CurrentSection"><a href="places12.html" title="Alphabet Menu: С">С</a></li>
-					<li><a href="places13.html" title="Alphabet Menu: Т">Т</a></li>
-					<li><a href="places14.html" title="Alphabet Menu: Ф">Ф</a></li>
-					<li><a href="places15.html" title="Alphabet Menu: Х">Х</a></li>
-					<li><a href="places16.html" title="Alphabet Menu: Ц">Ц</a></li>
-					<li><a href="places17.html" title="Alphabet Menu: Ч">Ч</a></li>
-					<li><a href="places18.html" title="Alphabet Menu: Ш">Ш</a></li>
+					<li><a href="places5.html" title="Alphabet Menu: Е">Е</a></li>
+					<li><a href="places6.html" title="Alphabet Menu: З">З</a></li>
+					<li><a href="places7.html" title="Alphabet Menu: К">К</a></li>
+					<li><a href="places8.html" title="Alphabet Menu: М">М</a></li>
+					<li><a href="places9.html" title="Alphabet Menu: Н">Н</a></li>
+					<li><a href="places10.html" title="Alphabet Menu: П">П</a></li>
+					<li><a href="places11.html" title="Alphabet Menu: С">С</a></li>
+					<li class = "CurrentSection"><a href="places12.html" title="Alphabet Menu: Т">Т</a></li>
+					<li><a href="places13.html" title="Alphabet Menu: Ф">Ф</a></li>
+					<li><a href="places14.html" title="Alphabet Menu: Х">Х</a></li>
+					<li><a href="places15.html" title="Alphabet Menu: Ц">Ц</a></li>
+					<li><a href="places16.html" title="Alphabet Menu: Ч">Ч</a></li>
+					<li><a href="places17.html" title="Alphabet Menu: Ш">Ш</a></li>
 				</ul>
 			</div>
 			<table class="infolist primobjlist placelist ltr">
@@ -114,76 +135,16 @@ function GoToTop() {
 						<th class="ColumnLatitude">Широта</th>
 						<th class="ColumnLongitude">Долгота</th>
 						<tr class = "BeginLetter">
-							<td class="ColumnLetter"><a name="С" title="Места на букву С">С</a></td>
+							<td class="ColumnLetter"><a name="Т" title="Места на букву Т">Т</a></td>
 							<td class="ColumnName">
-								<a href="plc/e/5/f8dc35bf8e635599510c7052d5e.html" title="Санкт-Петербург, Россия">
-								Санкт-Петербург, Россия
+								<a href="plc/5/5/f8d948d0ac064f7afea9da7f155.html" title="Тверь">
+								Тверь
 								</a>
 							</td>
 							<td class="ColumnState">&nbsp;</td>
 							<td class="ColumnCountry">Россия</td>
-							<td class="ColumnLatitude">59°57'00.00"С</td>
-							<td class="ColumnLongitude">30°19'00.00"В</td>
-						</tr>
-						<tr>
-							<td class="ColumnLetter">&nbsp;</td>
-							<td class="ColumnName">
-								<a href="plc/7/1/f8d94c4226b6590ab5e07ed7917.html" title="Селище,  Костромской р-н">
-								Селище,  Костромской р-н
-								</a>
-							</td>
-							<td class="ColumnState">&nbsp;</td>
-							<td class="ColumnCountry">Россия</td>
-							<td class="ColumnLatitude">57°45'27.72"С</td>
-							<td class="ColumnLongitude">40°52'41.16"В</td>
-						</tr>
-						<tr>
-							<td class="ColumnLetter">&nbsp;</td>
-							<td class="ColumnName">
-								<a href="plc/d/c/101d93cd1a033b887ad4a61f6cd.html" title="Смоленское кладбище">
-								Смоленское кладбище
-								</a>
-							</td>
-							<td class="ColumnState">&nbsp;</td>
-							<td class="ColumnCountry">Россия</td>
-							<td class="ColumnLatitude">59°56'36.00"С</td>
-							<td class="ColumnLongitude">30°14'55.00"В</td>
-						</tr>
-						<tr>
-							<td class="ColumnLetter">&nbsp;</td>
-							<td class="ColumnName">
-								<a href="plc/c/7/f902df286312a23947b2303ac7c.html" title="Собор Владимирской иконы Божией Матери,  Кронштадт">
-								Собор Владимирской иконы Божией Матери,  Кронштадт
-								</a>
-							</td>
-							<td class="ColumnState">&nbsp;</td>
-							<td class="ColumnCountry">Россия</td>
-							<td class="ColumnLatitude">59°59'54.64"С</td>
-							<td class="ColumnLongitude">29°45'59.00"В</td>
-						</tr>
-						<tr>
-							<td class="ColumnLetter">&nbsp;</td>
-							<td class="ColumnName">
-								<a href="plc/3/4/f9a688d2cd64a829a7cada68043.html" title="Собор Святой Живоначальной Троицы лейб-гвардии Измайловского полка">
-								Собор Святой Живоначальной Троицы лейб-гвардии Измайловского полка
-								</a>
-							</td>
-							<td class="ColumnState">&nbsp;</td>
-							<td class="ColumnCountry">Россия</td>
-							<td class="ColumnLatitude">59°54'58.00"С</td>
-							<td class="ColumnLongitude">30°18'20.99"В</td>
-						</tr>
-						<tr>
-							<td class="ColumnLetter">&nbsp;</td>
-							<td class="ColumnName">
-								<a href="plc/9/3/f9391ad91824a867e736e7b1039.html" title="Сторожевское кладбище,  Минск">
-								Сторожевское кладбище,  Минск
-								</a>
-							</td>
-							<td class="ColumnState">&nbsp;</td>
-							<td class="ColumnCountry">Белоруссия</td>
-							<td class="ColumnLatitude">53°54'57.89"С</td>
-							<td class="ColumnLongitude">27°33'13.70"В</td>
+							<td class="ColumnLatitude">56°51'27.71"С</td>
+							<td class="ColumnLongitude">35°54'55.89"В</td>
 						</tr>
 					</tr>
 				</thead>
@@ -192,7 +153,7 @@ function GoToTop() {
 		<div class="fullclear"></div>
 		<div id="footer">
 			<p id="createdate">
-			Создано с помощью <a href="http://gramps-project.org/">Gramps</a> AIO64-6.0.1--1<br />Последнее изменение было сделано 2026-02-24 11:32:58<br />Создано для Вся база данных
+			Создано с помощью <a href="http://gramps-project.org/">Gramps</a> AIO64-6.0.1--1<br />Последнее изменение было сделано 2024-05-06 16:56:42<br />Создано для Вся база данных
 			</p>
 			<p id="copyright">
 			<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License - By attribution" title="Creative Commons License - By attribution" src="images/somerights20.gif" /></a>

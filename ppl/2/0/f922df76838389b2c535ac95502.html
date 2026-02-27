@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html xml:lang="ru" lang="ru" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
 <head dir="ltr" lang="ru">
-	<title>Моё семейное древо - Парэнн, Жорж</title>
+	<title>Предки и потомки - Парэнн, Жорж</title>
 	<meta charset="UTF-8" />
 	<meta name ="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=0.5, maximum-scale=10.0, user-scalable=yes" />
 	<meta name ="apple-mobile-web-app-capable" content="yes" />
 	<meta name="generator" content="Gramps AIO64-6.0.1--1 http://gramps-project.org/" />
-	<meta name="author" content="" />
+	<meta name="author" content="Владимир Зверев" />
 	<meta name="robots" content="noindex" />
 	<meta name="googlebot" content="noindex" />
 	<link href="../../../images/favicon2.ico" rel="shortcut icon" type="image/x-icon" />
@@ -22,18 +22,36 @@
 	<link href="../../../css/Mainz.css" media="screen" rel="alternate stylesheet" title="Майнц" type="text/css" />
 	<link href="../../../css/Nebraska.css" media="screen" rel="alternate stylesheet" title="Небраска" type="text/css" />
 	<script>function navFunction() { var x = document.getElementById("dropmenu"); if (x.className === "nav") { x.className += " responsive"; } else { x.className = "nav"; } }</script>
+
+<script type="text/javascript">
+function toggleContent(elem, icon) {
+  // Get the DOM reference
+  var contentId = document.getElementById(elem);
+  var icon = document.getElementById(icon);
+  // Toggle
+  if (contentId.style.display == "block") {
+    contentId.style.display = "none";
+    icon.className = 'icon icon-close';
+  } else {
+    contentId.style.display = "block";
+    icon.className = 'icon icon-open';
+  };
+}
+</script>
+
 </head>
 <body dir="ltr">
 	<div id="outerwrapper">
 		<div class="ltr" id="header">
 			<button href="javascript:void(0);" class="navIcon" onclick="navFunction()">&#8801;</button>
-			<h1 class="nav" id="SiteTitle">Моё семейное древо</h1>
+			<h1 class="nav" id="SiteTitle">Предки и потомки</h1>
 		</div>
 		<div class="wrappernav ltr" id="nav" role="navigation">
 			<div class="container">
 				<ul class="nav" id="dropmenu">
+					<li><a href="../../../index.html" title="Домой">Домой</a></li>
 					<li class = "CurrentSection"><a href="../../../individuals.html" title="Люди">Люди</a></li>
-					<li><a href="../../../index.html" title="Фамилии">Фамилии</a></li>
+					<li><a href="../../../surnames.html" title="Фамилии">Фамилии</a></li>
 					<li><a href="../../../families.html" title="Семьи">Семьи</a></li>
 					<li><a href="../../../events.html" title="События">События</a></li>
 					<li><a href="../../../places.html" title="Места">Места</a></li>
@@ -41,8 +59,12 @@
 					<li><a href="../../../sources.html" title="Источники">Источники</a></li>
 					<li><a href="../../../repositories.html" title="Хранилища">Хранилища</a></li>
 					<li><a href="../../../media.html" title="Альбом">Альбом</a></li>
+					<li><a href="../../../addressbook.html" title="Адресная книга">Адресная книга</a></li>
 					<li><a href="../../../updates.html" title="Обновления">Обновления</a></li>
+					<li><a href="../../../statistics.html" title="Статистика">Статистика</a></li>
 					<li><a href="../../../cal/2026/index.html" title="Веб-календарь">Веб-календарь</a></li>
+					<li><a onclick="history.go(-1);">Предыдущее</a></li>
+					<li><a onclick="history.go(+1);">Следующее</a></li>
 				</ul>
 			</div>
 		</div>
@@ -94,8 +116,16 @@ function GoToTop() {
 				</table>
 			</div>
 			<div class="subsection" id="events">
-				<h4>События</h4>
-				<table class="infolist eventlist toggle_event ltr" id="toggle_event" style="display:block">
+				<h4 onclick="toggleContent('toggle_event', 'icon_event');">
+					<button class="icon" id="icon_event">
+						<svg class="triangle" viewBox="0 0 100 100">
+							<polygon points="5.9,88.2 50,11.8 94.1,88.2">
+							</polygon>
+						</svg>
+					</button>
+				События
+				</h4>
+				<table class="infolist eventlist toggle_event ltr" id="toggle_event" style="display:none">
 					<thead>
 						<tr>
 							<th class="ColumnEvent">Событие</th>
@@ -129,8 +159,16 @@ function GoToTop() {
 				</table>
 			</div>
 			<div class="subsection" id="families">
-				<h4>Семьи</h4>
-				<table class="infolist" id="toggle_families" style="display:block">
+				<h4 onclick="toggleContent('toggle_families', 'icon_families');">
+					<button class="icon" id="icon_families">
+						<svg class="triangle" viewBox="0 0 100 100">
+							<polygon points="5.9,88.2 50,11.8 94.1,88.2">
+							</polygon>
+						</svg>
+					</button>
+				Семьи
+				</h4>
+				<table class="infolist" id="toggle_families" style="display:none">
 					<tr class="BeginFamily">
 						<td class="ColumnValue" colspan="3"><H4 class="subsection"><a href="../../../fam/6/f/f922df3b8722de743086ea021f6.html" title="Семья Парэнн, Жорж и Минкевич, Ефросинья Ивановна">Семья Парэнн, Жорж и Минкевич, Ефросинья Ивановна</a></H4></td>
 					</tr>
@@ -186,8 +224,16 @@ function GoToTop() {
 				</table>
 			</div>
 			<div class="subsection" id="attributes">
-				<h4>Атрибуты</h4>
-				<table class="infolist attrlist" id="toggle_attr" style="display:block">
+				<h4 onclick="toggleContent('toggle_attr', 'icon_attr');">
+					<button class="icon" id="icon_attr">
+						<svg class="triangle" viewBox="0 0 100 100">
+							<polygon points="5.9,88.2 50,11.8 94.1,88.2">
+							</polygon>
+						</svg>
+					</button>
+				Атрибуты
+				</h4>
+				<table class="infolist attrlist" id="toggle_attr" style="display:none">
 					<thead>
 						<tr>
 							<th class="ColumnType">Тип</th>
@@ -213,14 +259,30 @@ function GoToTop() {
 				</table>
 			</div>
 			<div class="subsection" id="familymap">
-				<h4>Карта семьи</h4>
-				<div id="toggle_map" style="display:block">
+				<h4 onclick="toggleContent('toggle_map', 'icon_map');">
+					<button class="icon" id="icon_map">
+						<svg class="triangle" viewBox="0 0 100 100">
+							<polygon points="5.9,88.2 50,11.8 94.1,88.2">
+							</polygon>
+						</svg>
+					</button>
+				Карта семьи
+				</h4>
+				<div id="toggle_map" style="display:none">
 					<a class="familymap" href="../../../maps/2/0/f922df76838389b2c535ac95502.html" title="Карта семьи">Карта семьи</a>
 				</div>
 			</div>
 			<div class="subsection" id="pedigree">
-				<h4>Родословная</h4>
-				<ol class="pedigreegen" id="toggle_pedigree" style="display:block">
+				<h4 onclick="toggleContent('toggle_pedigree', 'icon_pedigree');">
+					<button class="icon" id="icon_pedigree">
+						<svg class="triangle" viewBox="0 0 100 100">
+							<polygon points="5.9,88.2 50,11.8 94.1,88.2">
+							</polygon>
+						</svg>
+					</button>
+				Родословная
+				</h4>
+				<ol class="pedigreegen" id="toggle_pedigree" style="display:none">
 					<li>
 						<ol>
 							<li class="thisperson">
